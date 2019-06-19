@@ -47,10 +47,10 @@ div(ng-hide='showCaseList() || securityService.loginFailure || !securityService.
                                 i.icon-severity.level4(ng-show='case.severity === "4 (Low)"') 4
                             .case-id
                                 .subheading {{case.case_number}}
-                                .description {{case.status}}
-                    // Ux review is needed. The check/x is not straight foward enough to show if a case is escalated.
-                    //.col-sm-1.col-md-1.item-group.escalated
-                    //    i.fa(ng-class='{"fa-check": case.escalated, "fa-close": !case.escalated}', uib-tooltip="{{case.escalated ? 'Escalated' : 'Not Escalated'}}")
+                                .description
+                                    span {{case.status}}
+                                    .escalated(ng-if="true") Escalated
+
                     .col-sm-8.col-md-3.item-group
                         .subheading
                             | {{case.summary}}

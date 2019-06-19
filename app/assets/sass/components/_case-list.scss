@@ -27,6 +27,12 @@ $subheading-margin-bottom: 4px;
 
 	.case-id {
 
+        .escalated {
+            color: $red;
+            font-weight: bold;
+            text-align: left;
+        }
+
 		.subheading {
 			font-weight: 700;
 			margin-bottom: 0;

@@ -15,5 +15,6 @@ export const solrCaseFields = [
   "case_owner",
   "case_severity",
   "case_last_public_update_date",
-  "case_last_public_update_by"
+  "case_last_public_update_by",
+  "case_customer_escalation"
 ]
