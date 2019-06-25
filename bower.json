@@ -2,7 +2,7 @@
   "name": "redhat-access-angular-ui",
   "version": "1.4.93",
   "dependencies": {
-    "stratajs": "1.6.3",
+    "stratajs": "1.6.6",
     "angular-treeview": "",
     "ng-table": "0.3.3",
     "angular-chosen-localytics": "1.0.8"
