@@ -14,10 +14,12 @@ module.exports = function(config) {
         // list of files / patterns to load in the browser
         files: [
             'node_modules/jquery/dist/jquery.min.js',
+            '../app/shared/hydrajs.js',
             'tests.bundle.js'
         ],
 
         preprocessors: {
+            '../app/shared/hydrajs.js': ['webpack', 'sourcemap'],
             'app/**/*.module.js': ['webpack', 'sourcemap'],
             // 'app/main.module.js': ['webpack', 'sourcemap'],
             'test/mocks/*.js': ['webpack', 'sourcemap'],

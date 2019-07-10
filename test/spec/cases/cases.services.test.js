@@ -1,5 +1,7 @@
 'use strict';
 
+import hydrajs from '../../../app/shared/hydrajs';
+
 describe('Case Services', function () {
     var caseService;
     var searchCaseService;
@@ -940,86 +942,100 @@ describe('Case Services', function () {
     //Suite for ProductsService
 
     describe('ProductsService', function () {
-        // TODO: mock out hydrajs for getProducts and getVersions
-        // it('should have a method to get products', function () {
-        //     expect(productsService.getProducts).toBeDefined();
-        //     var mockProducts = [{
-        //         "name": mockStrataDataService.mockProducts[0].name,
-        //         "code": mockStrataDataService.mockProducts[0].code,
-        //         "supported": mockStrataDataService.mockProducts[0].supported_for_customer,
-        //         "preferredServiceLevel": mockStrataDataService.mockProducts[0].preferredServiceLevel,
-        //         "serviceLevels": mockStrataDataService.mockProducts[0].serviceLevels
-        //     }];
-        //     caseService.kase={};
-        //     caseService.kase.product="Red Hat Enterprise Linux";
-        //     caseService.owner="skesharigit";
-        //     securityService.loginStatus.authedUser.is_internal=true;
-        //     productsService.getProducts(true);
-        //     spyOn(hydrajs.products, 'getProductsV2').and.return(mockProducts);
-        //     scope.$root.$digest();
-        //     expect(productsService.products).toEqual(mockProducts);
-        // });
-        //
-        // it('should have a method to get products with fetch for contact as false', function () {
-        //     expect(productsService.getProducts).toBeDefined();
-        //     caseService.kase={};
-        //     caseService.kase.product="Red Hat Enterprise Linux";
-        //     securityService.loginStatus.authedUser.is_internal=true;
-        //     caseService.kase.contact_sso_username = "skesharigit";
-        //     productsService.getProducts(false);
-        //     expect(productsService.productsLoading).toEqual(true);
-        //     spyOn(mockStrataService.products, 'list').and.callThrough();
-        //     scope.$root.$digest();
-        //     var mockProducts = [{
-        //         "name": mockStrataDataService.mockProducts[0].name,
-        //         "code": mockStrataDataService.mockProducts[0].code,
-        //         "supported": mockStrataDataService.mockProducts[0].supported_for_customer,
-        //         "preferredServiceLevel": mockStrataDataService.mockProducts[0].preferredServiceLevel,
-        //         "serviceLevels": mockStrataDataService.mockProducts[0].serviceLevels
-        //     }];
-        //     expect(productsService.products).toEqual(mockProducts);
-        //     expect(productsService.productsLoading).toEqual(false);
-        // });
-        //
-        // it('should have a method to get version', function () {
-        //     expect(productsService.getVersions).toBeDefined();
-        //     caseService.kase={};
-        //     caseService.kase.product="Red Hat Enterprise Linux";
-        //     caseService.owner="skesharigit";
-        //     productsService.getVersions(caseService.kase.product);
-        //     spyOn(mockStrataService.products, 'versions').and.callThrough();
-        //     scope.$root.$digest();
-        //     var mockSortedVersions = [
-        //         "7.0",
-        //         "6.3.2",
-        //         "6.3.1",
-        //         "6.3.0",
-        //         "6.2.4",
-        //         "6.2.3"
-        //     ];
-        //     expect(productsService.versions).toEqual(mockSortedVersions);
-        // });
-        //
-        // it('should have a method to get versions with different kase version', function () {
-        //     expect(productsService.getVersions).toBeDefined();
-        //     caseService.kase={};
-        //     caseService.kase.product="Red Hat Enterprise Linux";
-        //     caseService.kase.version="6.0";
-        //     caseService.owner="skesharigit";
-        //     productsService.getVersions(caseService.kase.product);
-        //     spyOn(mockStrataService.products, 'versions').and.callThrough();
-        //     //var returnValue=productsService.showVersionSunset();
-        //     scope.$root.$digest();
-        //     var mockSortedVersions = [
-        //         "7.0",
-        //         "6.3.2",
-        //         "6.3.1",
-        //         "6.3.0",
-        //         "6.2.4",
-        //         "6.2.3"
-        //     ];
-        //     expect(productsService.versions).toEqual(mockSortedVersions);
-        // });
+        it('should have a method to get products', async function () {
+            expect(productsService.getProducts).toBeDefined();
+            expect(hydrajs.products.getProductsV2).toBeDefined();
+            var mockProducts = [{
+                "name": mockStrataDataService.mockProducts[0].name,
+                "code": mockStrataDataService.mockProducts[0].code,
+                "supported": mockStrataDataService.mockProducts[0].supported_for_customer,
+                "preferredServiceLevel": mockStrataDataService.mockProducts[0].preferredServiceLevel,
+                "serviceLevels": mockStrataDataService.mockProducts[0].serviceLevels
+            }];
+
+            caseService.kase={};
+            caseService.kase.product="Red Hat Enterprise Linux";
+            caseService.owner="skesharigit";
+            securityService.loginStatus.authedUser.is_internal=true;
+            spyOn(hydrajs.products, 'getProductsV2').and.callFake(() => Promise.resolve(mockStrataDataService.mockProducts[0]));
+            await productsService.getProducts(true);
+            scope.$root.$digest();
+            expect(productsService.products).toEqual(mockProducts);
+        });
+
+        it('should have a method to get version', async function () {
+            expect(productsService.getVersions).toBeDefined();
+            expect(hydrajs.products.getProductVersionsV2).toBeDefined();
+            caseService.kase={};
+            caseService.kase.product="Red Hat Enterprise Linux";
+            caseService.owner="skesharigit";
+            var mockResponseSortedVersions = [{
+                name: "7.0"
+            }, {
+                name: "6.3.2"
+            }, {
+                name: "6.3.1"
+            }, {
+                name: "6.3.0"
+            }, {
+                name: "6.2.4"
+            }, {
+                name: "6.2.3"
+            }];
+
+            var mockSortedVersions = [
+                "7.0",
+                "6.3.2",
+                "6.3.1",
+                "6.3.0",
+                "6.2.4",
+                "6.2.3"
+            ];
+
+
+            spyOn(hydrajs.products, 'getProductVersionsV2').and.callFake(() => Promise.resolve(mockResponseSortedVersions));
+            await productsService.getVersions(caseService.kase.product);
+            scope.$root.$digest();
+            expect(productsService.versions).toEqual(mockSortedVersions);
+
+        });
+
+        it('should have a method to get versions with different kase version', async function () {
+            expect(productsService.getVersions).toBeDefined();
+            expect(hydrajs.products.getProductVersionsV2).toBeDefined();
+            caseService.kase={};
+            caseService.kase.product="Red Hat Enterprise Linux";
+            caseService.kase.version="6.0";
+            caseService.owner="skesharigit";
+            var mockResponseSortedVersions = [{
+                name: "7.0"
+            }, {
+                name: "6.3.2"
+            }, {
+                name: "6.3.1"
+            }, {
+                name: "6.3.0"
+            }, {
+                name: "6.2.4"
+            }, {
+                name: "6.2.3"
+            }];
+
+            var mockSortedVersions = [
+                "7.0",
+                "6.3.2",
+                "6.3.1",
+                "6.3.0",
+                "6.2.4",
+                "6.2.3"
+            ];
+
+            spyOn(hydrajs.products, 'getProductVersionsV2').and.callFake(() => Promise.resolve(mockResponseSortedVersions));
+            await productsService.getVersions(caseService.kase.product);
+            //var returnValue=productsService.showVersionSunset();
+            scope.$root.$digest();
+            expect(productsService.versions).toEqual(mockSortedVersions);
+        });
 
         it('should have a method for version sunset having versions which are sunset', function () {
             expect(productsService.showVersionSunset).toBeDefined();
