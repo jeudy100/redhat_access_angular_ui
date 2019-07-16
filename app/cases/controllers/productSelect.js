@@ -42,7 +42,7 @@ export default class ProductSelect {
         $scope.selectRecentProduct = (product) => {
             $scope.product = product.name;
             ProductsService.versions = [];
-            ProductsService.getVersions(product.name);
+            $scope.onProductSelect();
         };
 
         $scope.$watch('CaseService.kase.product', () => $scope.product = CaseService.kase.product);
