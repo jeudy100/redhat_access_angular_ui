@@ -51,7 +51,7 @@ export default class ProductsService {
                 contact = CaseService.virtualOwner; // Used for fetching products list(of customers) for cases managed by Partners
             }
             this.productsLoading = true;
-            return hydrajs.products.getProductsV2().then(angular.bind(this, function (response) {
+            return hydrajs.products.getProducts(contact).then(angular.bind(this, function (response) {
                 this.products = response.map((product) => {
                     product.code = product.name;
                     return product;
@@ -156,8 +156,8 @@ export default class ProductsService {
                 this.fetchProductDetail(product);
             }
 
-            return hydrajs.products.getProductVersionsV2(product).then(angular.bind(this, function (response) {
-                const versions = response.map((productObj) => productObj.name);
+            return hydrajs.products.getProductVersions(product).then(angular.bind(this, function (response) {
+                const versions = response.items;
                 this.versions = versionSort(versions);
                 this.versionDisabled = false;
                 this.versionLoading = false;
@@ -169,7 +169,7 @@ export default class ProductsService {
                 //     CaseService.newCaseIncomplete = true;
                 // }
                 //Fetch Recommendations
-                return response;
+                return this.versions;
             }), function (error) {
                 AlertService.addStrataErrorMessage(error);
                 this.versionLoading = false;

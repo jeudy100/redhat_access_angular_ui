@@ -13,7 +13,7 @@ export default class VersionSelect {
         $scope.version = CaseService.kase.version;
 
         if (RHAUtils.isNotEmpty(CaseService.kase.product)) {
-            $scope.versions = ProductsService.getVersions(CaseService.kase.product);
+            ProductsService.getVersions(CaseService.kase.product);
         }
         $scope.$on(CASE_EVENTS.productSelectChange, function () {
             if (RHAUtils.isNotEmpty(CaseService.kase.product)) {

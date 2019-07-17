@@ -944,7 +944,7 @@ describe('Case Services', function () {
     describe('ProductsService', function () {
         it('should have a method to get products', async function () {
             expect(productsService.getProducts).toBeDefined();
-            expect(hydrajs.products.getProductsV2).toBeDefined();
+            expect(hydrajs.products.getProducts).toBeDefined();
             var mockProducts = [{
                 "name": mockStrataDataService.mockProducts[0].name,
                 "code": mockStrataDataService.mockProducts[0].code,
@@ -957,7 +957,7 @@ describe('Case Services', function () {
             caseService.kase.product="Red Hat Enterprise Linux";
             caseService.owner="skesharigit";
             securityService.loginStatus.authedUser.is_internal=true;
-            spyOn(hydrajs.products, 'getProductsV2').and.callFake(() => Promise.resolve(mockStrataDataService.mockProducts[0]));
+            spyOn(hydrajs.products, 'getProducts').and.callFake(() => Promise.resolve(mockStrataDataService.mockProducts[0]));
             await productsService.getProducts(true);
             scope.$root.$digest();
             expect(productsService.products).toEqual(mockProducts);
@@ -965,7 +965,7 @@ describe('Case Services', function () {
 
         it('should have a method to get version', async function () {
             expect(productsService.getVersions).toBeDefined();
-            expect(hydrajs.products.getProductVersionsV2).toBeDefined();
+            expect(hydrajs.products.getProductVersions).toBeDefined();
             caseService.kase={};
             caseService.kase.product="Red Hat Enterprise Linux";
             caseService.owner="skesharigit";
@@ -993,7 +993,7 @@ describe('Case Services', function () {
             ];
 
 
-            spyOn(hydrajs.products, 'getProductVersionsV2').and.callFake(() => Promise.resolve(mockResponseSortedVersions));
+            spyOn(hydrajs.products, 'getProductVersions').and.callFake(() => Promise.resolve(mockResponseSortedVersions));
             await productsService.getVersions(caseService.kase.product);
             scope.$root.$digest();
             expect(productsService.versions).toEqual(mockSortedVersions);
@@ -1002,7 +1002,7 @@ describe('Case Services', function () {
 
         it('should have a method to get versions with different kase version', async function () {
             expect(productsService.getVersions).toBeDefined();
-            expect(hydrajs.products.getProductVersionsV2).toBeDefined();
+            expect(hydrajs.products.getProductVersions).toBeDefined();
             caseService.kase={};
             caseService.kase.product="Red Hat Enterprise Linux";
             caseService.kase.version="6.0";
@@ -1030,7 +1030,7 @@ describe('Case Services', function () {
                 "6.2.3"
             ];
 
-            spyOn(hydrajs.products, 'getProductVersionsV2').and.callFake(() => Promise.resolve(mockResponseSortedVersions));
+            spyOn(hydrajs.products, 'getProductVersions').and.callFake(() => Promise.resolve(mockResponseSortedVersions));
             await productsService.getVersions(caseService.kase.product);
             //var returnValue=productsService.showVersionSunset();
             scope.$root.$digest();
