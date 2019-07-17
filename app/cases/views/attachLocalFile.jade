@@ -13,5 +13,5 @@
     translate='',
     ng-hide='AttachmentsService.updatedAttachments.length > 0') Attach File
     div#fileUploaderDiv(style='height: 0px; width:0px; overflow:hidden;')
-      input(id='fileUploader', type='file', value='upload', rha-onchange='selectFile', ng-model='file', ng-disabled='AttachmentsService.uploadingAttachments || CaseService.submittingCase')
+      input(id='fileUploader', type='file', multiple="true", name="files[]", value='upload', rha-onchange='selectFile', ng-disabled='AttachmentsService.uploadingAttachments || CaseService.submittingCase')
 

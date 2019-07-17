@@ -25,14 +25,14 @@ export default class AttachLocalFile {
             $scope.fileName = $scope.NO_FILE_CHOSEN;
             $scope.fileDescription = '';
         };
-        $scope.addFile = function () {
+        $scope.addFile = function (file) {
             /*jshint camelcase: false */
             var createdDate = RHAUtils.convertToTimezone(new Date());
             AttachmentsService.addNewAttachment({
-                file_name: $scope.fileName,
+                file_name: file.name,
                 description: $scope.fileDescription,
-                fileObj: $scope.fileObj,
-                length: $scope.fileSize,
+                fileObj: file,
+                length: file.size,
                 created_by: securityService.loginStatus.authedUser.last_name + ', ' + securityService.loginStatus.authedUser.first_name,
                 last_modified_by: securityService.loginStatus.authedUser.last_name + ', ' + securityService.loginStatus.authedUser.first_name,
                 created_date: RHAUtils.formatDate(createdDate, 'MMM DD YYYY'),
@@ -49,44 +49,45 @@ export default class AttachLocalFile {
         $scope.selectFile = function () {
             const minSize = 0;
             const maxSize = AttachmentsService.s3EnabledForAccount ? 1e12 : (AttachmentsService.maxAttachmentSize / 1024) * 1000000000;
-            const file = $('#fileUploader')[0].files[0];
-            const greaterThanMin = file.size > minSize;
-            const lessThanMax = file.size < maxSize;
-            if ((file && greaterThanMin && lessThanMax) || (file && greaterThanMin && AttachmentsService.s3EnabledForAccount)) {
-                $scope.fileObj = file;
-                $scope.fileSize = $scope.fileObj.size;
-                $scope.fileName = $scope.fileObj.name;
 
-                // Check if file is readable
-                const reader = new FileReader();
-                reader.onload = () => {
-                    $scope.addFile();
-                };
-                reader.onerror = () => {
-                    const message = gettextCatalog.getString('{{errorFileName}} cannot be read by the browser. Check your privileges and make sure you are allowed to read the file.', {
+            // Array.prototype.forEach is needed becasue the file input object is not an actual array so it does not
+            // have forEach method (https://developer.mozilla.org/en-US/docs/Web/API/FileList).
+            Array.prototype.forEach.call($('#fileUploader')[0].files, (file) => {
+                const greaterThanMin = file.size > minSize;
+                const lessThanMax = file.size < maxSize;
+                if ((file && greaterThanMin && lessThanMax) || (file && greaterThanMin && AttachmentsService.s3EnabledForAccount)) {
+
+                    // Check if file is readable
+                    const reader = new FileReader();
+                    reader.onload = () => {
+                        $scope.addFile(file);
+                    };
+                    reader.onerror = () => {
+                        const message = gettextCatalog.getString('{{errorFileName}} cannot be read by the browser. Check your privileges and make sure you are allowed to read the file.', {
+                            errorFileName: file.name
+                        });
+                        AlertService.addDangerMessage(message);
+                        if ($scope.$root.$$phase !== '$apply' && $scope.$root.$$phase !== '$digest') {
+                            $scope.$apply();
+                        }
+                    };
+                    reader.readAsArrayBuffer(file.slice(0,10)); // try reading first 10 bytes
+                } else if (file && file.size === minSize) {
+                    var message = gettextCatalog.getString("{{errorFileName}} cannot be attached because it is a 0 byte file.", {errorFileName: file.name});
+                    AlertService.addDangerMessage(message);
+                } else if (file && !AttachmentsService.s3EnabledForAccount) {
+                    var message = gettextCatalog.getString("{{errorFileName}} cannot be attached because it is larger than {{errorFileSize}} GB. Please FTP large files to dropbox.redhat.com.", {
+                        errorFileName: file.name,
+                        errorFileSize: (AttachmentsService.maxAttachmentSize / 1024)
+                    });
+                    AlertService.addDangerMessage(message);
+                } else if (file && AttachmentsService.s3EnabledForAccount) {
+                    var message = gettextCatalog.getString("{{errorFileName}} cannot be attached because it is larger than 1 TB.", {
                         errorFileName: file.name
                     });
                     AlertService.addDangerMessage(message);
-                    if ($scope.$root.$$phase !== '$apply' && $scope.$root.$$phase !== '$digest') {
-                        $scope.$apply();
-                    }
-                };
-                reader.readAsArrayBuffer(file.slice(0,10)); // try reading first 10 bytes
-            } else if (file && file.size === minSize) {
-                var message = gettextCatalog.getString("{{errorFileName}} cannot be attached because it is a 0 byte file.", {errorFileName: file.name});
-                AlertService.addDangerMessage(message);
-            } else if (file && !AttachmentsService.s3EnabledForAccount) {
-                var message = gettextCatalog.getString("{{errorFileName}} cannot be attached because it is larger than {{errorFileSize}} GB. Please FTP large files to dropbox.redhat.com.", {
-                    errorFileName: file.name,
-                    errorFileSize: (AttachmentsService.maxAttachmentSize / 1024)
-                });
-                AlertService.addDangerMessage(message);
-            } else if (file && AttachmentsService.s3EnabledForAccount) {
-                var message = gettextCatalog.getString("{{errorFileName}} cannot be attached because it is larger than 1 TB.", {
-                    errorFileName: file.name
-                });
-                AlertService.addDangerMessage(message);
-            }
+                }
+            });
 
             if ($scope.$root.$$phase !== '$apply' && $scope.$root.$$phase !== '$digest') {
                 $scope.$apply();

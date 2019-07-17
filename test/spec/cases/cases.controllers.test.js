@@ -918,15 +918,17 @@ describe('Case Controllers', function () {
                 AttachmentsService: mockAttachmentsService,
                 RHAUtils:mockRHAUtils
             });
-            mockScope.fileObj = 'test_data';
-            mockScope.fileDescription = 'test_description';
-            mockScope.fileName = 'test_file';
-            mockScope.fileSize = '200MB';
-            console.log(mockScope.addFile);
+
+            var file = {
+                size: 32323,
+                name: 'gfdsfds',
+                fileDescription: '',
+            };
+
             expect(mockScope.addFile).toBeDefined();
-            mockScope.addFile();
+            mockScope.addFile(file);
             expect(mockAttachmentsService.updatedAttachments.length).toEqual(1);
-            expect(mockAttachmentsService.updatedAttachments[0].description).toEqual('test_description');
+            expect(mockAttachmentsService.updatedAttachments[0].description).toEqual('');
         }));
     });
 
