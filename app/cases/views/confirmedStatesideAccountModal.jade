@@ -1,8 +1,12 @@
 .modal-header
     h1 Confirmed Stateside Support Account
 .modal-body.confirmation-modal
-    span Thanks for being a Red Hat Confirmed Stateside Support customer. Please visit your special customer portal here:
-    a(target="_blank")  https://css-redhat.zendesk.com
-    span , and can call us at 888-472-0031.
+    pre.pre-text.pre-wrap
+        | Thank you for being a Red Hat Confirmed Stateside Support customer. CSS customers receive their support via a special case management system and a separate phone support number.
+    pre.pre-text.pre-wrap For opening a CSS support case, please visit
+        a(ng-href='https://css-redhat.zendesk.com', target='_blank')  css-redhat.zendesk.com
+        |  or you may dial 888-472-0031 for phone support.
+    pre.pre-text.pre-wrap Thank You,
+        | Red Hat Support Delivery
 .modal-footer
     a.btn.btn-success(type="button", ng-click="closeModal()", ng-href="#/case/list", translate) Go To Case List

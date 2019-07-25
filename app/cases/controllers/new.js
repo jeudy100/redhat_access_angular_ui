@@ -47,7 +47,9 @@ export default class New {
                 CaseService.account.has_confirmed_stateside_support) {
                 $uibModal.open({
                     template: require('../views/confirmedStatesideAccountModal.jade'),
-                    controller: 'ConfirmedStatesideAccountModal'
+                    controller: 'ConfirmedStatesideAccountModal',
+                    backdrop  : 'static',
+                    keyboard  : false
                 });
             }
         });
