@@ -63,15 +63,15 @@ export default class New {
                     template: require('../views/redhatOpenshiftClusterManagerModal.jade'),
                     controller: 'RedhatOpenshiftClusterManagerModal'
                 }).result.then((submitCase) => {
-                    CaseService.kase.product = 'OpenShift Container Platform';
-                    delete CaseService.kase.version;
-                    ProductsService.getVersions(CaseService.kase.product);
-                    ProductsService.versions = [];
-                    document.getElementById('rha-product-select-label').scrollIntoView(true);
-                    CaseService.updateLocalStorageForNewCase();
-
                     if (submitCase) {
                         $scope.doSubmit($event);
+                    } else {
+                        CaseService.kase.product = 'OpenShift Container Platform';
+                        delete CaseService.kase.version;
+                        ProductsService.getVersions(CaseService.kase.product);
+                        ProductsService.versions = [];
+                        document.getElementById('rha-product-select-label').scrollIntoView(true);
+                        CaseService.updateLocalStorageForNewCase();
                     }
                 });
             } else {
