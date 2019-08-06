@@ -193,7 +193,6 @@ ul#tab_list.nav.nav-tabs(role="tablist")
             .row(ng-if="securityService.loginStatus.authedUser.is_internal")
                 .col-xs-12
                     textarea#rha-action-plan(
-                    style='width: 100%; height: 70px; max-width: 100%;',
                     ng-model='CaseService.kase.action_plan',
                     maxlength='32768',
                     name='actionPlan')
