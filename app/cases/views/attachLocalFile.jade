@@ -5,7 +5,7 @@
     ng-click='getFile()',
     ng-disabled='CaseService.addingComment',
     translate='',
-    ng-hide='AttachmentsService.updatedAttachments.length === 0 || AttachmentsService.uploadingAttachments') Attach Another File
+    ng-hide='AttachmentsService.updatedAttachments.length === 0 || AttachmentsService.uploadingAttachments') Attach another file(s)
     button.btn.btn-primary.btn-app(
     uib-tooltip="{{getAttachFileTT(AttachmentsService.s3EnabledForAccount)}}"
     ng-click='getFile()',
