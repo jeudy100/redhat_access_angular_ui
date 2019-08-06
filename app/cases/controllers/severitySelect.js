@@ -18,6 +18,8 @@ export default class SeveritySelect {
                 event.returnValue = false;
                 event.cancelBubble = true;
             }
+
+            $scope.createdCase.severity = severity;
             $scope.openSeverityDetails(severity.name);
             CaseService.validateNewCase();
         };
