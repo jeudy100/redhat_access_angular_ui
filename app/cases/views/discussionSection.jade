@@ -167,7 +167,6 @@ ul#tab_list.nav.nav-tabs(role="tablist")
             .row
                 .col-xs-12
                     textarea#rha-case-notes(
-                    style='width: 100%; height: 70px; max-width: 100%;',
                     ng-model='CaseService.kase.notes',
                     maxlength='{{noteCharactersMax}}',
                     name='notes')
@@ -192,10 +191,14 @@ ul#tab_list.nav.nav-tabs(role="tablist")
                     span {{::"No action plan to display."|translate}}
             .row(ng-if="securityService.loginStatus.authedUser.is_internal")
                 .col-xs-12
-                    textarea#rha-action-plan(
-                    ng-model='CaseService.kase.action_plan',
-                    maxlength='32768',
-                    name='actionPlan')
+                    textarea.comment.expand.form-control#rha-action-plan(
+                        ng-disabled='CaseService.updatingCase',
+                        ng-model='CaseService.kase.action_plan',
+                        ng-click='enlargeActionPlan = !enlargeActionPlan',
+                        ng-class='{"expanded": enlargeActionPlan}',
+                        ng-blur='enlargeActionPlan = false',
+                        maxlength='32768',
+                        name='actionPlan')
             span.warning-text(ng-if="securityService.loginStatus.authedUser.is_internal && COMMON_CONFIG.isGS4") {{::'Updates to Action Plan are customer facing.'|translate}}
             .row.row-short(ng-if="securityService.loginStatus.authedUser.is_internal")
                 .col-sm-6
