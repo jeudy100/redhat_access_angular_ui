@@ -196,7 +196,7 @@ export default class CaseService {
         this.postCustomNotificationEmail = async () => {
             try {
                 this.loadingCustomNotificationEmails = true;
-                await hydrajs.kase.addCustomEmailToCase(securityService.loginStatus.authedUser.account_number, this.kase.case_number, this.newCustomEmail);
+                await hydrajs.kase.addCustomEmailToCase(this.kase.account_number, this.kase.case_number, this.newCustomEmail);
                 this.customNotificationEmails.push({ emailAddress: this.newCustomEmail, caseNumber: this.kase.case_number });
                 this.newCustomEmail = '';
                 this.loadingCustomNotificationEmails = false;
