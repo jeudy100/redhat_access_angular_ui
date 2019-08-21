@@ -91,7 +91,7 @@ export default class AdvancedCaseSearchService {
 
         this.initiateCSVDownload = () => {
             this.exporting = true;
-            return strataService.cases.advancedSearch(this.query, this.order, 0, 10000, 'csv', solrCaseFields).then((response, xhr) => {
+            return strataService.cases.advancedSearch(this.query, this.order, 0, 1000, 'csv', solrCaseFields).then((response, xhr) => {
                 const csvBlob = new Blob([response], { type: 'text/csv' });
                 FileSaver.saveAs(csvBlob, 'cases-export.csv');
                 this.exporting = false;
