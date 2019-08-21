@@ -1,11 +1,12 @@
 'use strict';
 
 export default class CommonConfirmationModal {
-    constructor($scope, $uibModalInstance, CaseService, strataService, AlertService, SearchCaseService, gettextCatalog, CASE_EVENTS, $q) {
+    constructor($rootScope, $scope, $uibModalInstance, CaseService, strataService, AlertService, SearchCaseService, gettextCatalog, CASE_EVENTS, $q) {
         'ngInject';
 
         $scope.CaseService = CaseService;
         $scope.confirm = function () {
+            console.log('hello')
             $uibModalInstance.close();
             if (CaseService.confirmationModal === CASE_EVENTS.caseClose) {
                 $scope.closeCases();
@@ -14,6 +15,9 @@ export default class CommonConfirmationModal {
             } else if (CaseService.confirmationModal === CASE_EVENTS.newPageCEP) {
                 CaseService.isNewPageCEP = false;
             } else {
+                console.log('hello again')
+                CaseService.resetStrataSearchCache();
+                $rootScope.$broadcast(CASE_EVENTS.searchSubmit);
                 CaseService.updateCase().then(function () {
                     SearchCaseService.clear();
                 }, function (error) {

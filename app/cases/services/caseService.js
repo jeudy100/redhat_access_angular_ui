@@ -266,6 +266,7 @@ export default class CaseService {
             $rootScope.$broadcast(CASE_EVENTS.filterChanged);
             $rootScope.$broadcast(CASE_EVENTS.searchSubmit);
         };
+
         this.onSelectChanged = function () {
             $rootScope.$broadcast(CASE_EVENTS.searchSubmit);
         };
@@ -1331,6 +1332,16 @@ export default class CaseService {
 
         this.mapUsers = (users) => {
             return _.compact(_.map(users, (userSSO) => _.find(this.internalNotificationContacts, { 'ssoUsername': userSSO })))
+        };
+
+        this.resetStrataSearchCache = () => {
+            const strataCache = CacheFactory.get('strataCache');
+                (strataCache.keys() || []).forEach(function (key) {
+                    if (key.startsWith('search')) {
+                        console.log(key)
+                        strataCache.remove(key);
+                    }
+                });
         };
     }
 }
