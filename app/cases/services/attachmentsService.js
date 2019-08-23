@@ -160,7 +160,8 @@ export default class AttachmentsService {
                 item.published_time = RHAUtils.formatDate(lastModifiedDate, 'hh:mm A Z');
                 return item;
             });
-            this.defineOriginalAttachments(attachments);
+
+            this.defineOriginalAttachments(_.uniqBy(attachments, 'uuid'));
             this.loading = false;
         };
 
