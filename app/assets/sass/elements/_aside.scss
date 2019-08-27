@@ -27,7 +27,7 @@
 	.section-title {
 		text-transform: none;
 		@include font-size(18px);
-		line-height: 1;
+		line-height: 1.5;
 		@include rem('margin-bottom', $global-padding);
 
 		.link {

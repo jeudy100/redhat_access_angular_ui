@@ -13,7 +13,7 @@ $subheading-margin-bottom: 4px;
 
 		@include media-query (sm) {
 			@include rem('margin-bottom', $subheading-margin-bottom);
-			line-height: 1;
+			line-height: 1.5;
 		}
 	}
 
@@ -22,7 +22,7 @@ $subheading-margin-bottom: 4px;
 		overflow: hidden;
         color: $case-list-color;
 		text-overflow: ellipsis;
-		line-height: 1;
+		line-height: 1.5;
 	}
 
 	.case-id {

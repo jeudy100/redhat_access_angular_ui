@@ -826,7 +826,7 @@ aside section + section {
 .table-list h1, .table-list h2, .table-list h3 {
   margin: 0 0 4px;
   margin: 0 0 0.25rem;
-  line-height: 1;
+  line-height: 1.5;
 }
 /* line 16, ../sass/components/_table-list.scss */
 .table-list .list-item {
@@ -890,7 +890,7 @@ aside section + section {
   font-size: 2.75rem;
   line-height: 61.6px;
   line-height: 3.85rem;
-  line-height: 1;
+  line-height: 1.5;
 }
 
 /* line 4, ../sass/components/_case-description.scss */
@@ -933,7 +933,7 @@ aside section + section {
   font-size: 1.25rem;
   line-height: 28px;
   line-height: 1.75rem;
-  line-height: 1;
+  line-height: 1.5;
   margin-bottom: 30px;
   margin-bottom: 1.875rem;
 }

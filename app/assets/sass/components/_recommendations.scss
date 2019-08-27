@@ -195,7 +195,7 @@ $recommendations-dark-link-color: #0bc0fc;
 		top: 0px;
 		left: -18px;
 		@include font-size(18px);
-		line-height: 1;
+		line-height: 1.5;
 	}
 
 	ul {
@@ -214,7 +214,7 @@ $recommendations-dark-link-color: #0bc0fc;
 		.title {
 			padding: 0;
 			@include font-size(14px);
-			line-height: 1;
+			line-height: 1.5;
 		}
 
 		// set the pinned and pinning states to be visible always

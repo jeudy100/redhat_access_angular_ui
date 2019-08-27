@@ -4,14 +4,14 @@ $case-border: $border-gray;
 .table-list {
 	@include rem('margin', 15px 0);
 	@include font-size(14px);
-	line-height: 1;
+	line-height: 1.5;
 	border-top: 1px solid $border-gray;
 
 	h1,
 	h2,
 	h3 {
 		@include rem('margin', 0 0 4px);
-		line-height: 1;
+		line-height: 1.5;
 	}
 
 	.list-item {
@@ -50,7 +50,7 @@ $case-border: $border-gray;
 			left: 0;
 			top: 0;
 			@include font-size(44px);
-			line-height: 1;
+			line-height: 1.5;
 		}
 	}
 

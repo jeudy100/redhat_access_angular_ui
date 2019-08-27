@@ -6,6 +6,12 @@
 		color: darken($link-color, 5);
 	}
 }
+
+// breadcrumbs:last-child is needed because of the last bread crumb in the portal header
+a, #breadcrumbs:last-child {
+	font-size: 16px;
+}
+
 .link-chat {
 	@include media-query (sm) { float:right; }
 }
