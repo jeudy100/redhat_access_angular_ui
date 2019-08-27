@@ -34,7 +34,7 @@ export default class List {
             try {
                 const accountNumber = SearchCaseService.searchParameters.accountNumber || securityService.loginStatus.authedUser.account_number;
                 const query = `case_accountNumber:${accountNumber}`;
-                const response = await strataService.cases.advancedSearch(query, null, 0, 1000, 'csv', solrCaseFields);
+                const response = await strataService.cases.advancedSearch(query, null, 0, 1000, 'csv', solrCaseFields, null, null, null, null, null, 'lastModifiedDate');
 
                 const csvBlob = new Blob([response], {
                     type: 'text/csv'
