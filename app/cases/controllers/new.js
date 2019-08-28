@@ -305,11 +305,12 @@ export default class New {
         $scope.initDescription = function () {
             var searchObject = $location.search();
             if (RHAUtils.isNotEmpty(CaseService.localStorageCache) && CaseService.localStorageCache.get(securityService.loginStatus.authedUser.sso_username)) {
-                CaseService.kase.description = CaseService.localStorageCache.get(securityService.loginStatus.authedUser.sso_username).text;
-                CaseService.kase.problem = CaseService.localStorageCache.get(securityService.loginStatus.authedUser.sso_username).problem;
-                CaseService.kase.environment = CaseService.localStorageCache.get(securityService.loginStatus.authedUser.sso_username).environment;
-                CaseService.kase.occurance = CaseService.localStorageCache.get(securityService.loginStatus.authedUser.sso_username).occurance;
-                CaseService.kase.urgency = CaseService.localStorageCache.get(securityService.loginStatus.authedUser.sso_username).urgency;
+                var draftNewCase = CaseService.localStorageCache.get(securityService.loginStatus.authedUser.sso_username).text;
+                CaseService.kase.description = draftNewCase.description;
+                CaseService.kase.problem = draftNewCase.problem;
+                CaseService.kase.environment = draftNewCase.environment;
+                CaseService.kase.occurance = draftNewCase.occurance;
+                CaseService.kase.urgency = draftNewCase.urgency;
             }
             var setDesc = function (desc) {
                 CaseService.kase.description = desc;
@@ -345,6 +346,7 @@ export default class New {
                 CaseService.kase.summary = draftNewCase.summary;
                 CaseService.kase.hostname = draftNewCase.hostname;
                 CaseService.kase.type = draftNewCase.type;
+                $scope.onCaseTypeChanged();
                 if (RHAUtils.isEmpty(urlParameter.product)) {
                     if (RHAUtils.isNotEmpty(draftNewCase.product)) {
                         $scope.setProductAndVersion(draftNewCase.product, draftNewCase.version);
@@ -679,7 +681,6 @@ export default class New {
         };
 
         $scope.updateDescriptionString = function () {
-            CaseService.kase.description = '';
             if (RHAUtils.isNotEmpty(CaseService.kase.problem) && CaseService.kase.problem.length > 0) {
                 CaseService.kase.description = gettextCatalog.getString(CaseService.problemString) + '\n\n' + CaseService.kase.problem;
             }
