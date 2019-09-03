@@ -26,6 +26,9 @@ export default class ProductSelect {
                         code: CaseService.kase.product,
                         name: CaseService.kase.product
                     };
+
+                    CaseService.updateAndValidateEntitlements(ProductsService.products.find((v) => v.name === $scope.product));
+
                     let prodInArray = false;
                     for (var i = 0; i < $scope.products.length; i++) {
                         if ($scope.products[i].code === selectedProduct.code && $scope.products[i].name === selectedProduct.name) {
@@ -45,7 +48,15 @@ export default class ProductSelect {
             $scope.onProductSelect();
         };
 
-        $scope.$watch('CaseService.kase.product', () => $scope.product = CaseService.kase.product);
+        $scope.$watch('CaseService.kase.product', () => {
+            if (RHAUtils.isNotEmpty(CaseService.kase.product)) {
+                $scope.product = CaseService.kase.product;
+
+                if (RHAUtils.isNotEmpty(ProductsService.products)) {
+                    CaseService.updateAndValidateEntitlements(ProductsService.products.find((v) => v.name === $scope.product));
+                }
+            }
+        });
 
         $scope.onProductSelect = function ($event) {
             CaseService.kase.product = $scope.product;
