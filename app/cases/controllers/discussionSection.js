@@ -119,8 +119,8 @@ export default class DiscussionSection {
             });
         }
 
-        $scope.getOrderedDiscussionElements = () => {
-            var sorted = orderBy(DiscussionService.discussionElements, "sortModifiedDate");
+        $scope.getOrderedDiscussionElements = (useAttachmentsOnly) => {
+            var sorted = orderBy(useAttachmentsOnly ? AttachmentsService.originalAttachments : DiscussionService.discussionElements, "sortModifiedDate");
             var ordered = $scope.commentSortOrder ? reverse(sorted) : sorted;
             return filter(ordered, (e) => (!e.draft))
         }
@@ -128,7 +128,7 @@ export default class DiscussionSection {
         $scope.scrollToComment = (commentId, delay) => {
             if (commentId) {
                 let pageSize = $scope.attachments ? $scope.PaginationService.attachmentsSection.pageSize : $scope.PaginationService.discussionSection.pageSize;
-                let commentIndex = findIndex($scope.getOrderedDiscussionElements(), { id: commentId });
+                let commentIndex = findIndex($scope.getOrderedDiscussionElements($scope.attachments), { id: commentId });
                 let commentNumber = commentIndex + 1;
                 let mod = (commentNumber % pageSize);
                 let division = Math.floor(commentNumber / pageSize);
