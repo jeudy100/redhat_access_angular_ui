@@ -1,9 +1,9 @@
 select#rha-status-select(chosen,
-    width='"100%"',
+     width='"100%"',
 	  ng-disabled='!securityService.loginStatus.isLoggedIn',
     ng-model='CaseService.status',
     ng-change='CaseService.onSelectChanged()',
-    ng-options='status.value as status.name for status in statuses',
+    ng-options='status.value as status.name | translate for status in statuses',
     data-placeholder="{{'Select an Option' | translate}}",
     no_results_text="'No match found'|translate",
     disable_search_threshold=10)

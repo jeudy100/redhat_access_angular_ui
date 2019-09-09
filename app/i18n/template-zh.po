@@ -2425,8 +2425,8 @@ msgstr "问题实际比最初想象的更严重。"
 msgid "ACE Escalation"
 msgstr "ACE 升级"
 
-msgid "Showing 1 - 48 of 48 results"
-msgstr "显示 1 - 48 （共 48 个）结果"
+msgid "Showing {{firstNumOfResults}} - {{lastNumOfResults}} of {{totalNumOfResults}} results"
+msgstr "显示 {{firstNumOfResults}} - {{lastNumOfResults}} （共 {{totalNumOfResults}} 个）结果"
 
 msgid "Show per page"
 msgstr "按页显示"

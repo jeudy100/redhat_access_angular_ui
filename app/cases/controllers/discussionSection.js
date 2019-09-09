@@ -104,15 +104,15 @@ export default class DiscussionSection {
         };
 
         $scope.showingResultsString =  function() {
-            return gettextCatalog.getString('Showing {{showing}} - {{x}} of {{y}} results', {
-                showing: PaginationService.firstItemNumberShownOnThePage('discussionSection', DiscussionService.discussionElements.length),
-                x: PaginationService.lastItemNumberShownOnThePage('discussionSection', DiscussionService.discussionElements.length),
-                y: DiscussionService.discussionElements.length
+            return gettextCatalog.getString('Showing {{firstNumOfResults}} - {{lastNumOfResults}} of {{totalNumOfResults}} results', {
+                firstNumOfResults: PaginationService.firstItemNumberShownOnThePage('discussionSection', DiscussionService.discussionElements.length),
+                lastNumOfResults: PaginationService.lastItemNumberShownOnThePage('discussionSection', DiscussionService.discussionElements.length),
+                totalNumOfResults: DiscussionService.discussionElements.length
             });
         };
 
         $scope.showingAttachmentsResultsString = () => {
-            return gettextCatalog.getString("Showing {{firstNumOfResults}}-{{lastNumOfResults}} of {{totalNumOfResults}} results", {
+            return gettextCatalog.getString("Showing {{firstNumOfResults}} - {{lastNumOfResults}} of {{totalNumOfResults}} results", {
                 firstNumOfResults: PaginationService.firstItemNumberShownOnThePage('attachmentsSection', DiscussionService.attachments.length),
                 lastNumOfResults: PaginationService.lastItemNumberShownOnThePage('attachmentsSection', DiscussionService.attachments.length),
                 totalNumOfResults: DiscussionService.attachments.length

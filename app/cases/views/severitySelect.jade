@@ -14,7 +14,7 @@
                         span.icon-severity.level2(ng-show="severity.name === '2 (High)'", ng-disabled="!$parent.CaseService.isValidSeverity('2 (High)')") 2
                         span.icon-severity.level3(ng-show="severity.name === '3 (Normal)'", ng-disabled=!"$parent.CaseService.isValidSeverity('3 (Normal)')") 3
                         span.icon-severity.level4(ng-show="severity.name === '4 (Low)'", ng-disabled="!$parent.CaseService.isValidSeverity('4 (Low)')") 4
-                    span.severity-select-name(ng-show="!ie8") {{'Severity' |translate}} {{ severity.name}}
+                    span.severity-select-name(ng-show="!ie8") {{'Severity' |translate}} {{ severity.translatedName }}
                     span.severity-select-name(ng-show="ie8") {{ severity.name }}
                 td(ng-show='!$parent.CaseService.kase.isOpenShiftOnlineProduct')
                     div.severity-time-description {{severity.responseTimes.standard}}

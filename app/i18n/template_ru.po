@@ -2514,8 +2514,8 @@ msgstr "Проблема более серьезная, чем казалось 
 msgid "ACE Escalation"
 msgstr "Эскалация ACE"
 
-msgid "Showing 1 - 48 of 48 results"
-msgstr "Показано результатов: 1–48 из 48"
+msgid "Showing {{firstNumOfResults}} - {{lastNumOfResults}} of {{totalNumOfResults}} results"
+msgstr "Показано результатов: {{firstNumOfResults}} – {{lastNumOfResults}} из {{totalNumOfResults}}"
 
 msgid "Show per page"
 msgstr "Показать на странице"

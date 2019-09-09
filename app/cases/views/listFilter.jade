@@ -32,7 +32,7 @@
                 ng-disabled='!securityService.loginStatus.isLoggedIn',
                 ng-model='SearchCaseService.searchParameters.caseStatus',
                 ng-change='CaseService.onSelectChanged()',
-                ng-options='status.value as status.name for status in ConstantsService.statuses',
+                ng-options='status.value as status.name | translate for status in ConstantsService.statuses',
                 disable_search_threshold=10)
 // Need UX to look at where/how to place new filters.
 //.row.filter-row

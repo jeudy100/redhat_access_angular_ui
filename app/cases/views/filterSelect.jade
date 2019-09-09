@@ -6,5 +6,5 @@ select#rha-filter-select(
     ng-disabled='!securityService.loginStatus.isLoggedIn',
     ng-model='CaseService.filterSelect',
     ng-change='CaseService.onFilterSelectChanged()',
-    ng-options='sort as sort.name for sort in ConstantsService.sortByParams',
+    ng-options='sort as sort.name | translate for sort in ConstantsService.sortByParams',
     disable_search_threshold=10)

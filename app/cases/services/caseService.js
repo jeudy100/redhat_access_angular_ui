@@ -233,18 +233,21 @@ export default class CaseService {
             angular.forEach(this.severities, function (severity) {
                 severity.responseTimes = {};
                 if (severity.name === '1 (Urgent)') {
+                    severity.translatedName = `1 (${gettextCatalog.getString('Urgent')})`;
                     severity.responseTimes.standard = gettextCatalog.getString('{{hours}} business hour', { hours: 1 });
                     severity.responseTimes.premium = gettextCatalog.getString('{{hours}} hour', { hours: 1 });
                     severity.details = gettextCatalog.getString('A problem that severely impacts your use of the software in a production environment ' +
                         '(such as loss of production data or in which your production systems are not functioning). ' +
                         'The situation halts your business operations and no procedural workaround exists.');
                 } else if (severity.name === '2 (High)') {
+                    severity.translatedName = `2 (${gettextCatalog.getString('High')})`;
                     severity.responseTimes.standard = gettextCatalog.getString('{{hours}} business hours', { hours: 4 });
                     severity.responseTimes.premium = gettextCatalog.getString('{{hours}} hours', { hours: 2 });
                     severity.details = gettextCatalog.getString('A problem where the software is functioning but your use in a production environment ' +
                         'is severely reduced. The situation is causing a high impact to portions of your business ' +
                         'operations and no procedural workaround exists.');
                 } else if (severity.name === '3 (Normal)') {
+                    severity.translatedName = `3 (${gettextCatalog.getString('Normal')})`;
                     severity.responseTimes.standard = gettextCatalog.getString('{{days}} business day', { days: 1 });
                     severity.responseTimes.premium = gettextCatalog.getString('{{hours}} business hours', { hours: 4 });
                     severity.details = gettextCatalog.getString('A problem that involves partial, non-critical loss of use of the software in ' +
@@ -253,6 +256,7 @@ export default class CaseService {
                         'using a procedural workaround. For development environments, where the situation is causing ' +
                         'your project to no longer continue or migrate into production.');
                 } else if (severity.name === '4 (Low)') {
+                    severity.translatedName = `4 (${gettextCatalog.getString('Low')})`;
                     severity.responseTimes.standard = gettextCatalog.getString('{{days}} business days', { days: 2 });
                     severity.responseTimes.premium = gettextCatalog.getString('{{hours}} business hours', { hours: 8 });
                     severity.details = gettextCatalog.getString('A general usage question, reporting of a documentation error, or recommendation ' +

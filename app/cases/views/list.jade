@@ -19,8 +19,7 @@ div(ng-hide='showCaseList() || securityService.loginFailure || !securityService.
                                 | {{'Open a Support Case'|translate}}
                             a.btn.btn-app.btn-sm(translate='',translate-comment='Verb', ng-click='closeCases()', ng-disabled='!caseChosen()', ng-class="{'btn-primary': caseChosen() }") Close Case(s)
                         div(style='padding-top: 10px;')
-                            span {{'Find answers faster with '|translate}}
-                                a(href='/solution-engine') Solution Engine
+                            a(href='/solution-engine') {{'Find answers faster with Solution Engine'|translate}}
     .row(ng-hide='!CaseService.sfdcIsHealthy || SearchCaseService.totalCases == 0')
         .col-sm-6
             .case-count
@@ -48,7 +47,7 @@ div(ng-hide='showCaseList() || securityService.loginFailure || !securityService.
                             .case-id
                                 .subheading {{case.case_number}}
                                 .description
-                                    span {{case.status}}
+                                    span {{case.status | translate}}
                                     .escalated(ng-if="case.case_customer_escalation || case.escalated") Escalated
 
                     .col-sm-8.col-md-3.item-group

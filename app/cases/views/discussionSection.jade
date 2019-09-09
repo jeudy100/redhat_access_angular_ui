@@ -21,7 +21,7 @@ ul#tab_list.nav.nav-tabs(role="tablist")
                 ng-init="DiscussionService.commentSortOrder = commentSortOrderList[0]"
                 ng-model='DiscussionService.commentSortOrder',
                 ng-change='onSortOrderChange()',
-                ng-options='commentOrder as commentOrder.name for commentOrder in commentSortOrderList')
+                ng-options='commentOrder as commentOrder.name | translate for commentOrder in commentSortOrderList')
         .row.row-very-short.case-discussion
             .col-xs-12
                 // Add Comment Section

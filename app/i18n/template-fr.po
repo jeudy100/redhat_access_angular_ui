@@ -2593,8 +2593,8 @@ msgstr "Le problème est plus grave que prévu initialement."
 msgid "ACE Escalation"
 msgstr "Escalade ACE"
 
-msgid "Showing 1 - 48 of 48 results"
-msgstr "Affichage 1 - 48 de 48 résultats"
+msgid "Showing {{firstNumOfResults}} - {{lastNumOfResults}} of {{totalNumOfResults}} results"
+msgstr "Affichage {{firstNumOfResults}} - {{lastNumOfResults}} de {{totalNumOfResults}} résultats"
 
 msgid "Show per page"
 msgstr "Afficher par page"

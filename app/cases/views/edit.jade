@@ -34,10 +34,10 @@ div.edit(ng-if='showCasePage()')
           ng-if='$parent.securityService.loginStatus.authedUser.is_internal && $parent.COMMON_CONFIG.isGS4') {{'Edit'|translate}}
       .row.row-very-short
         .col-md-12(ng-if='$parent.securityService.loginStatus.authedUser.is_internal || $parent.userHasManagedAccounts()')
-          span(translate) Account number: {{$parent.CaseService.account.number}}
+          span(translate) Account number : {{$parent.CaseService.account.number}}
       .row.row-very-short
         .col-md-12(ng-if='$parent.securityService.loginStatus.authedUser.is_internal || $parent.userHasManagedAccounts()')
-          span(translate) Account name: {{$parent.CaseService.account.name}}
+          span(translate) Account name : {{$parent.CaseService.account.name}}
           span(rha-bookmark-account, account='$parent.CaseService.account', ng-if='$parent.securityService.loginStatus.authedUser.is_internal && !$parent.COMMON_CONFIG.isGS4')
       .row.row-very-short
         .col-md-12

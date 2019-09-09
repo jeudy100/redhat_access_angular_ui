@@ -1,7 +1,7 @@
 select#rha-product-select.form-control(
 	chosen,
     data-placeholder="{{placeholder || 'Select an Option' | translate}}",
-    no_results_text="'No products found'|translate",
+    no_results_text="'No match found'|translate",
 	width='"100%"',
 	ng-disabled='ProductsService.products.length === 0 || !securityService.loginStatus.isLoggedIn || CaseService.submittingCase || ProductsService.productsLoading',
 	ng-model='product',

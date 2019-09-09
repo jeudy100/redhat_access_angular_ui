@@ -2458,8 +2458,8 @@ msgstr "当初の判断より問題が深刻な場合。"
 msgid "ACE Escalation"
 msgstr "ACE エスカレーション"
 
-msgid "Showing 1 - 48 of 48 results"
-msgstr "48 件中 1 - 48 を表示"
+msgid "Showing {{firstNumOfResults}} - {{lastNumOfResults}} of {{totalNumOfResults}} results"
+msgstr "{{totalNumOfResults}} 件中 {{firstNumOfResults}} - {{lastNumOfResults}} を表示"
 
 msgid "Show per page"
 msgstr "ページごとに表示"

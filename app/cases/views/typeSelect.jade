@@ -5,4 +5,4 @@ select#rha_type_select(
 	width='"100%"',
     data-placeholder="{{'Select an Option' | translate}}",
     no_results_text="'No match found'|translate",
-	ng-options='type.name for type in CaseService.types track by type.name')
+	ng-options='type.name | translate for type in CaseService.types track by type.name')

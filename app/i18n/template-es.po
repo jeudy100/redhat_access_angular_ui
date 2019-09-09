@@ -2547,8 +2547,8 @@ msgstr "cuando el problema es más grave de lo previsto."
 msgid "ACE Escalation"
 msgstr "Remisión ACE"
 
-msgid "Showing 1 - 48 of 48 results"
-msgstr "Mostrando 1- 48 de 48 resultados"
+msgid "Showing {{firstNumOfResults}} - {{lastNumOfResults}} of {{totalNumOfResults}} results"
+msgstr "Mostrando {{firstNumOfResults}} - {{lastNumOfResults}} de {{totalNumOfResults}} resultados"
 
 msgid "Show per page"
 msgstr "Mostrar por página"

@@ -7,7 +7,8 @@ section.filters
         name='status',
         ng-model='CaseService.kase.status',
         ng-change="updateCase()",
-        ng-options='s.name for s in CaseService.statuses track by s.name')
+        ng-options='s.name | translate for s in CaseService.statuses track by s.name',
+        no_results_text="'No match found'|translate")
     .col-sm-4
       select#rha-severity-select(
         chosen,
@@ -15,5 +16,6 @@ section.filters
         name='severity',
         ng-model='CaseService.kase.severity',
         ng-change="updateSeverity()",
-        ng-options='s.name for s in CaseService.severities track by s.name')
+        ng-options='s.name as s.translatedName | translate for s in CaseService.severities track by s.name',
+        no_results_text="'No match found'|translate")
       //span.glyphicon.glyphicon-question-sign(uib-tooltip-html='{{"Different support-level options might be available based on your account subscriptions. Your support level determines the type of response you can expect for your support case." |translate }}<br></br><a href=\'/support/offerings/production/sla.html\' target=\'_blank\'>{{"View Production Support Service Level Agreement"|translate}}</a>',tabindex='0',tooltip-trigger="focus")

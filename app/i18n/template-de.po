@@ -2555,8 +2555,8 @@ msgstr "Das Problem gravierender ist als ursprünglich angenommen;"
 msgid "ACE Escalation"
 msgstr "ACE-Eskalation"
 
-msgid "Showing 1 - 48 of 48 results"
-msgstr "1–48 von 48 Ergebnissen werden gezeigt"
+msgid "Showing {{firstNumOfResults}} - {{lastNumOfResults}} of {{totalNumOfResults}} results"
+msgstr "{{firstNumOfResults}} – {{lastNumOfResults}} von {{totalNumOfResults}} Ergebnissen werden gezeigt"
 
 msgid "Show per page"
 msgstr "Pro Seite anzeigen"

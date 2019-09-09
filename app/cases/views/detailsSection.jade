@@ -69,7 +69,7 @@ section.case-description
                         chosen,
                         width="'100%'",
                         name='internalStatus',
-                        ng-options='internalStatus for internalStatus in CaseService.internalStatuses',
+                        ng-options='internalStatus | translate for internalStatus in CaseService.internalStatuses',
                         ng-model='CaseService.kase.internal_status')
                 .row.row-short(ng-if='securityService.loginStatus.authedUser.is_internal && COMMON_CONFIG.isGS4')
                     .col-xs-4.col-sm-3.col-md-4
@@ -93,7 +93,7 @@ section.case-description
                         chosen,
                         width="'100%'",
                         name='group',
-                        ng-options='g.name for g in groups track by g.number',
+                        ng-options='g.name | translate for g in groups track by g.number',
                         ng-model='CaseService.kase.group',
                         ng-change='fetchPossibleContacts()')
                 .row.row-short(ng-show="securityService.loginStatus.authedUser.org_admin || (CaseService.kase.contact_is_partner && securityService.loginStatus.authedUser.org_admin) || CaseService.isManagedAccount(CaseService.kase.account_number)")
@@ -104,6 +104,7 @@ section.case-description
                         chosen,
                         width="'100%'",
                         name='owner',
+                        no_results_text="'No match found'|translate",
                         ng-options='user.sso_username as user.sso_username for user in contactList',
                         ng-model='CaseService.kase.contact_sso_username',
                         ng-change='contactSelected()')

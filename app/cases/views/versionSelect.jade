@@ -1,8 +1,8 @@
 select#rha-product-version-select.form-control(
 	chosen,
 	width='"100%"',
-    data-placeholder="{{placeholder || 'Select a Version' | translate}}",
-    no_results_text="'No versions found'|translate",
+    data-placeholder="{{placeholder || 'Select an Option' | translate}}",
+    no_results_text="'No match found'|translate",
 	ng-model='version',
 	ng-options='v for v in versions',
 	ng-change='onVersionSelect($event)',

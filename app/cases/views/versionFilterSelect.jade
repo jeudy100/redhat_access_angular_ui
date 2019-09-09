@@ -1,7 +1,7 @@
 select#rha-product-filter-select(chosen,
     width='"100%"',
     data-placeholder="{{'No versions found' | translate}}",
-    no_results_text="'No versions found'|translate",
+    no_results_text="'No match found'|translate",
     ng-disabled='!securityService.loginStatus.isLoggedIn  || !hasProductQuery()',
     ng-model='version',
     ng-change='onVersionChange()',

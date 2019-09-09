@@ -2459,8 +2459,8 @@ msgstr "예상했던 것보다 문제가 심각한 경우"
 msgid "ACE Escalation"
 msgstr "ACE 에스컬레이션"
 
-msgid "Showing 1 - 48 of 48 results"
-msgstr "48개 중 1 - 48 표시"
+msgid "Showing {{firstNumOfResults}} - {{lastNumOfResults}} of {{totalNumOfResults}} results"
+msgstr "{{totalNumOfResults}}개 중 {{firstNumOfResults}} - {{lastNumOfResults}} 표시"
 
 msgid "Show per page"
 msgstr "페이지별로 표시"
