@@ -310,6 +310,10 @@ msgstr ""
 msgid "Friday = {{businessHours}}"
 msgstr ""
 
+#: dist/pcm.js:3930
+msgid "High"
+msgstr ""
+
 #: dist/pcm.js:187
 #: node_modules/redhat_access_pcm_ascension_common/dist/redhat_access_pcm_ascension_common.js:22257
 msgid "Highest Severity"
@@ -342,6 +346,10 @@ msgstr ""
 #: dist/pcm.js:187 app/i18n/placeholder.html:4
 #: node_modules/redhat_access_pcm_ascension_common/dist/redhat_access_pcm_ascension_common.js:21330
 msgid "Logs"
+msgstr ""
+
+#: dist/pcm.js:3930
+msgid "Low"
 msgstr ""
 
 #: dist/pcm.js:187
@@ -411,6 +419,10 @@ msgstr ""
 msgid "No access"
 msgstr ""
 
+#: dist/pcm.js:3930
+msgid "Normal"
+msgstr ""
+
 #: dist/pcm.js:187
 #: node_modules/redhat_access_pcm_ascension_common/dist/redhat_access_pcm_ascension_common.js:22324
 msgid "Number & Status"
@@ -470,7 +482,7 @@ msgstr ""
 msgid "Please check the requestor email address"
 msgstr ""
 
-#: dist/pcm.js:2047 dist/pcm.js:3922
+#: dist/pcm.js:2047 dist/pcm.js:3923
 msgid "Portal Case Management"
 msgstr ""
 
@@ -484,11 +496,11 @@ msgstr ""
 msgid "Product and Version assigned to the case."
 msgstr ""
 
-#: dist/pcm.js:3922
+#: dist/pcm.js:3923
 msgid "Read Only"
 msgstr ""
 
-#: dist/pcm.js:3922 app/cases/views/manageGroupUsers.html:28
+#: dist/pcm.js:3923 app/cases/views/manageGroupUsers.html:28
 msgid "Read and Write"
 msgstr ""
 
@@ -549,12 +561,8 @@ msgstr ""
 
 #: dist/pcm.js:2050
 msgid ""
-"Showing {{firstNumOfResults}}-{{lastNumOfResults}} of {{totalNumOfResults}} "
-"results"
-msgstr ""
-
-#: dist/pcm.js:2050
-msgid "Showing {{showing}} - {{x}} of {{y}} results"
+"Showing {{firstNumOfResults}} - {{lastNumOfResults}} of "
+"{{totalNumOfResults}} results"
 msgstr ""
 
 #: dist/pcm.js:3929
@@ -646,6 +654,14 @@ msgid ""
 "records indicate your availability as follows:"
 msgstr ""
 
+#: dist/pcm.js:2049
+msgid "The remote session terms have been acknowledged"
+msgstr ""
+
+#: dist/pcm.js:2049
+msgid "The remote session terms have not been acknowledged"
+msgstr ""
+
 #: dist/pcm.js:2049 dist/pcm.js:3923
 msgid "There are no remaining enhanced SLA's available"
 msgstr ""
@@ -689,6 +705,10 @@ msgstr ""
 
 #: dist/pcm.js:3929
 msgid "Uploading attachments..."
+msgstr ""
+
+#: dist/pcm.js:3930
+msgid "Urgent"
 msgstr ""
 
 #: dist/pcm.js:3917 dist/pcm.js:3923
@@ -931,11 +951,11 @@ msgid "Account Name"
 msgstr ""
 
 #: app/cases/views/edit.html:37
-msgid "Account name: {{$parent.CaseService.account.name}}"
+msgid "Account name : {{$parent.CaseService.account.name}}"
 msgstr ""
 
 #: app/cases/views/edit.html:34
-msgid "Account number: {{$parent.CaseService.account.number}}"
+msgid "Account number : {{$parent.CaseService.account.number}}"
 msgstr ""
 
 #: app/cases/views/accountSearch.html:6
@@ -964,7 +984,7 @@ msgstr ""
 msgid "Add"
 msgstr ""
 
-#: app/cases/views/emailNotifySelect.html:25
+#: app/cases/views/emailNotifySelect.html:26
 msgid "Add Custom Email"
 msgstr ""
 
@@ -1293,7 +1313,7 @@ msgstr ""
 msgid "Enhanced SLA"
 msgstr ""
 
-#: app/cases/views/emailNotifySelect.html:28
+#: app/cases/views/emailNotifySelect.html:29
 msgid "Enter Custom Email Address"
 msgstr ""
 
@@ -1385,7 +1405,7 @@ msgid "Find an account"
 msgstr ""
 
 #: app/cases/views/list.html:20
-msgid "Find answers faster with"
+msgid "Find answers faster with Solution Engine"
 msgstr ""
 
 #: app/cases/views/manageGroupUsers.html:18
@@ -1634,9 +1654,16 @@ msgid "No linked bugzillas"
 msgstr ""
 
 #: app/cases/views/bookmarkedAccountSelect.html:3
+#: app/cases/views/descriptionSection.html:5
+#: app/cases/views/descriptionSection.html:8
+#: app/cases/views/detailsSection.html:91
+#: app/cases/views/filterByOwnerSelect.html:2
 #: app/cases/views/managedAccountSelect.html:3 app/cases/views/new.html:100
-#: app/cases/views/ownerSelect.html:3 app/cases/views/statusSelect.html:2
-#: app/cases/views/typeSelect.html:2
+#: app/cases/views/ownerSelect.html:3
+#: app/cases/views/productFilterSelect.html:2
+#: app/cases/views/productSelect.html:2 app/cases/views/statusSelect.html:2
+#: app/cases/views/typeSelect.html:2 app/cases/views/versionFilterSelect.html:2
+#: app/cases/views/versionSelect.html:2
 msgid "No match found"
 msgstr ""
 
@@ -1649,18 +1676,11 @@ msgstr ""
 msgid "No new contacts found."
 msgstr ""
 
-#: app/cases/views/productFilterSelect.html:2
-#: app/cases/views/productSelect.html:2
-msgid "No products found"
-msgstr ""
-
-#: app/cases/views/emailNotifySelect.html:14
+#: app/cases/views/emailNotifySelect.html:15
 msgid "No users selected"
 msgstr ""
 
-#: app/cases/views/filterByOwnerSelect.html:2
 #: app/cases/views/versionFilterSelect.html:2
-#: app/cases/views/versionSelect.html:2
 msgid "No versions found"
 msgstr ""
 
@@ -1972,6 +1992,10 @@ msgstr ""
 msgid "Search Partner"
 msgstr ""
 
+#: app/cases/views/emailNotifySelect.html:13
+msgid "Search here to add a User"
+msgstr ""
+
 #: app/cases/views/emailNotifySelectInternal.html:12
 #: app/cases/views/new.html:135
 msgid "Search here to add watchers"
@@ -2001,8 +2025,7 @@ msgstr ""
 msgid "Select SBRs"
 msgstr ""
 
-#: app/cases/views/emailNotifySelect.html:12 app/cases/views/new.html:120
-#: app/cases/views/new.html:127
+#: app/cases/views/new.html:120 app/cases/views/new.html:127
 msgid "Select a User"
 msgstr ""
 

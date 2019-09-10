@@ -2349,8 +2349,8 @@ msgstr "Все закрытые запросы"
 msgid "All Cases"
 msgstr "Все запросы"
 
-msgid "Find answers faster with Solution Engine"
-msgstr "Находите ответы быстрее с помощью Solution Engine"
+msgid "Find answers faster with <a href="{{link}}">{{linkText}}</a>"
+msgstr "Находите ответы быстрее с помощью <a href="{{link}}">{{linkText}}</a>"
 
 msgid "Newest Date Modified"
 msgstr "Самая поздняя дата изменения"

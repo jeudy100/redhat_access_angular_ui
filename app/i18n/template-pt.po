@@ -2384,8 +2384,8 @@ msgstr "Todos os casos encerrados"
 msgid "All Cases"
 msgstr "Todos os casos"
 
-msgid "Find answers faster with Solution Engine"
-msgstr "Encontre respostas mais rapidamente com o Solution Engine"
+msgid "Find answers faster with <a href="{{link}}">{{linkText}}</a>"
+msgstr "Encontre respostas mais rapidamente com o <a href="{{link}}">{{linkText}}</a>"
 
 msgid "Newest Date Modified"
 msgstr "Data de modificação mais recente"

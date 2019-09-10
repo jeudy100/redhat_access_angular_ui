@@ -2294,8 +2294,8 @@ msgstr "종료된 케이스"
 msgid "All Cases"
 msgstr "모든 케이스"
 
-msgid "Find answers faster with Solution Engine"
-msgstr "Solution Engine을 사용하여 신속한 문제 해결 방법 검색"
+msgid "Find answers faster with <a href="{{link}}">{{linkText}}</a>"
+msgstr "<a href="{{link}}">{{linkText}}</a>을 사용하여 신속한 문제 해결 방법 검색"
 
 msgid "Newest Date Modified"
 msgstr "변경 날짜 (최근 날짜 순)"

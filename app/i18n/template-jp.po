@@ -2293,8 +2293,8 @@ msgstr "すべてのクローズケース"
 msgid "All Cases"
 msgstr "すべてのケース"
 
-msgid "Find answers faster with Solution Engine"
-msgstr "Solution Engine でより迅速に問題を解決します"
+msgid "Find answers faster with <a href="{{link}}">{{linkText}}</a>"
+msgstr "<a href="{{link}}">{{linkText}}</a> でより迅速に問題を解決します"
 
 msgid "Newest Date Modified"
 msgstr "変更日 (新しい日付順)"

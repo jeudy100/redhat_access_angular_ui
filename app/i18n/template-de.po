@@ -2390,8 +2390,8 @@ msgstr "Alle abgeschlossenen Fälle"
 msgid "All Cases"
 msgstr "Alle Fälle"
 
-msgid "Find answers faster with Solution Engine"
-msgstr "Finden Sie mit Solution Engine schneller Antworten"
+msgid "Find answers faster with <a href="{{link}}">{{linkText}}</a>"
+msgstr "Finden Sie mit <a href="{{link}}">{{linkText}}</a> schneller Antworten"
 
 msgid "Newest Date Modified"
 msgstr "Neuestes geändertes Datum"
@@ -2555,8 +2555,8 @@ msgstr "Das Problem gravierender ist als ursprünglich angenommen;"
 msgid "ACE Escalation"
 msgstr "ACE-Eskalation"
 
-msgid "Showing {{firstNumOfResults}} - {{lastNumOfResults}} of {{totalNumOfResults}} results"
-msgstr "{{firstNumOfResults}} – {{lastNumOfResults}} von {{totalNumOfResults}} Ergebnissen werden gezeigt"
+msgid "Showing 1 - 48 of 48 results"
+msgstr "1–48 von 48 Ergebnissen werden gezeigt"
 
 msgid "Show per page"
 msgstr "Pro Seite anzeigen"
