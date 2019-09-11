@@ -12,6 +12,7 @@ export default class List {
         $scope.securityService = securityService;
         $scope.AlertService = AlertService;
         $scope.CaseService = CaseService;
+        $scope.gettextCatalog = gettextCatalog;
         $scope.NEW_CASE_CONFIG = NEW_CASE_CONFIG;
         $scope.ie8 = window.ie8;
         $scope.ie9 = window.ie9;
@@ -34,7 +35,7 @@ export default class List {
             try {
                 const accountNumber = SearchCaseService.searchParameters.accountNumber || securityService.loginStatus.authedUser.account_number;
                 const query = `case_accountNumber:${accountNumber}`;
-                const response = await strataService.cases.advancedSearch(query, null, 0, 1000, 'csv', solrCaseFields, null, null, null, null, null, 'lastModifiedDate');
+                const response = await strataService.cases.advancedSearch(query, null, 0, 10000, 'csv', solrCaseFields);
 
                 const csvBlob = new Blob([response], {
                     type: 'text/csv'
@@ -175,5 +176,7 @@ export default class List {
         $scope.loadingRecWatcher = $scope.$watch('SearchCaseService.searchParameters.caseStatus', function (newVal) {
             $scope.getCasesText();
         });
+
+        $scope.getSolutionEngineLinkText = () => gettextCatalog.getString('Find answers faster with <a href="{{link}}">{{linkText}}</a>', {linkText: 'Soultion Engine', link: '/solution-engine'});
     }
 }

@@ -2260,8 +2260,8 @@ msgstr "所有关闭的问题单"
 msgid "All Cases"
 msgstr "所有问题单"
 
-msgid "Find answers faster with Solution Engine"
-msgstr "使用解决引擎可以更快找到答案"
+msgid "Find answers faster with <a href="{{link}}">{{linkText}}</a>"
+msgstr "使用 <a href="{{link}}">{{linkText}}</a> 可以更快找到答案"
 
 msgid "Newest Date Modified"
 msgstr "最新更新的日期"
