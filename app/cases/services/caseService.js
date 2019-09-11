@@ -780,7 +780,7 @@ export default class CaseService {
         this.updateAndValidateEntitlements = function (product) {
             // case_number is empty means its new case create page
             if (_.isEmpty(this.kase.case_number)) {
-                if (!_.isEmpty(this.kase.product) && !_.isEmpty(product)) {
+                if (!_.isEmpty(this.kase.product) && !_.isEmpty(product) && !_.isEmpty(product.serviceLevels) && !_.isEmpty(product.preferredServiceLevel)) {
                     this.entitlements = product.serviceLevels;
                     this.entitlement = product.preferredServiceLevel;
                 }
