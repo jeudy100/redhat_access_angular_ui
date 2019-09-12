@@ -176,6 +176,6 @@ export default class List {
             $scope.getCasesText();
         });
 
-        $scope.getSolutionEngineLinkText = () => gettextCatalog.getString('Find answers faster with <a href="{{link}}">{{linkText}}</a>', {linkText: 'Soultion Engine', link: '/solution-engine'});
+        $scope.getSolutionEngineLinkText = () => gettextCatalog.getString('Find answers faster with <a href="{{link}}">{{linkText}}</a>', {linkText: 'Solution Engine', link: '/solution-engine'});
     }
 }
