@@ -140,7 +140,7 @@ ul#tab_list.nav.nav-tabs(role="tablist")
                             a.pull-right(ng-if="showJumpToCommentId == attachment.id" ng-click="jumpToComment(attachment.id)", ng-href='#/case/{{CaseService.kase.case_number}}?commentId={{attachment.id}}') Jump to attachment
 
                         .byline
-                            author {{::attachment.last_modified_by}} {{::'on'|translate}} &nbsp;
+                            author {{::attachment.last_modified_by ? attachment.last_modified_by : attachment.modifiedBy}} {{::'on'|translate}} &nbsp;
                             date {{::attachment.published_date}} &nbsp;
                             span {{::'at'|translate}} &nbsp;
                             time {{::attachment.published_time}}
