@@ -165,7 +165,7 @@ div(rha-header='', page='newCase')
 
                             div(ng-if="!$parent.COMMON_CONFIG.isGS4 && !$parent.disableEmailNotifySelect()")
                                 label(for='email-notifications', translate, translate-comment="Noun") {{'Send Additional Email Notifications to' | translate}}
-                                    span.glyphicon.glyphicon-info-sign.link.margin-left-sm(uib-tooltip-html='"<div><span>{{"By opening this case you will automatically receive notifications." |translate }}</span></div>"',tabindex='0',tooltip-trigger="focus")
+                                    span.glyphicon.glyphicon-info-sign.link.margin-left-sm(uib-tooltip-html='"<div><span>{{"By opening this case you will automatically receive notifications" |translate }}</span></div>"',tabindex='0',tooltip-trigger="focus")
                                 .spinner.spinner-inline.spinner-xs(ng-show='!$parent.securityService.loginStatus.isLoggedIn  || $parent.CaseService.usersLoading || $parent.securityService.loggingIn')
                                 select(
                                 chosen,
@@ -180,7 +180,7 @@ div(rha-header='', page='newCase')
                             div(ng-if="!$parent.COMMON_CONFIG.isGS4 && $parent.disableEmailNotifySelect()")
                                 label(for='email-notifications',translate,translate-comment="Noun") {{'Send Additional Email Notifications to' | translate}}
                                     span &nbsp;
-                                    span.glyphicon.glyphicon-info-sign.link(uib-tooltip-html='"<div><span>{{"By opening this case you will automatically receive notifications." |translate }}</span></div>"',tabindex='0',tooltip-trigger="focus")
+                                    span.glyphicon.glyphicon-info-sign.link(uib-tooltip-html='"<div><span>{{"By opening this case you will automatically receive notifications" |translate }}</span></div>"',tabindex='0',tooltip-trigger="focus")
                                 .spinner.spinner-inline(ng-show='!$parent.securityService.loginStatus.isLoggedIn  || $parent.CaseService.usersLoading || $parent.securityService.loggingIn')
                                 input.form-control(
                                 ng-disabled='true',
@@ -199,7 +199,7 @@ div(rha-header='', page='newCase')
                                 div(ng-show="CaseService.noResultsForRHUsersSearch && !CaseService.isLoadingRHUsers" translate) No new contacts found.
 
                             div(ng-show='$parent.securityService.loginStatus.authedUser.is_internal && $parent.securityService.isCep')
-                                label#rha-cep-flag(for='email-notifications', translate,translate-comment="Noun"){{::'Consultant Engaged'}}
+                                label#rha-cep-flag(for='email-notifications', translate,translate-comment="Noun"){{::'Consultant Engaged'| translate}}
                                     input.margin-left-sm(
                                     ng-model="CaseService.isNewPageCEP",
                                     type="checkbox",
