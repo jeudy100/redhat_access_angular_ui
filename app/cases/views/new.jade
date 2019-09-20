@@ -136,7 +136,7 @@ div(rha-header='', page='newCase')
                             ng-model="$parent.CaseService.entitlement",
                             ng-change="$parent.CaseService.onChangeFTSCheckCreationPage()",
                             width="'100%'",
-                            ng-options="entitlement as entitlement for entitlement in $parent.CaseService.entitlements")
+                            ng-options="entitlement as entitlement | translate for entitlement in $parent.CaseService.entitlements")
                                 option(value="")
                             label {{'Severity' |translate}}
                                 span.glyphicon.glyphicon-question-sign.link(uib-tooltip-html='"<div><span>{{"To Learn more view the" |translate }}</span><br /><a href=\'/support/policy/severity\' target=\'_blank\'>{{"Red Hat Support Severity Level Definitions"|translate}}</a></div>"',tabindex='0',tooltip-trigger="click")
@@ -205,7 +205,7 @@ div(rha-header='', page='newCase')
                                     type="checkbox",
                                     ng-change="updateCEP(CaseService.isNewPageCEP)"
                                     name="cepCheckbox")
-                                    span.glyphicon.glyphicon-info-sign.text-info.margin-left-sm(uib-tooltip="{{cepMessage}}")
+                                    span.glyphicon.glyphicon-info-sign.text-info.margin-left-sm(uib-tooltip="{{'Used by consultants to indicate that a consulting engagement is in progress and the issue requires an increased attention from support resources' | translate}}")
 
                             label(translate,translate-comment="Noun" ng-if="!$parent.caseGroupRequired") Case Group (Optional)
                             label(translate,translate-comment="Noun" ng-if="$parent.caseGroupRequired") Case Group (Mandatory)

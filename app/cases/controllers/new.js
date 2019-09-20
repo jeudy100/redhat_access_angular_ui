@@ -25,7 +25,6 @@ export default class New {
         $scope.HeaderService = HeaderService;
         $scope.ie8 = window.ie8;
         $scope.ie9 = window.ie9;
-        $scope.cepMessage = gettextCatalog.getString("Used by consultants to indicate that a consulting engagement is in progress and the issue requires increased attention from support resources");
         $scope.ie8Message = 'We’re unable to accept file attachments from Internet Explorer 8 (IE8) at this time. Please see our instructions for providing files <a href=\"https://access.redhat.com/solutions/2112\" target="_blank\">via FTP </a> in the interim.';
 
         $scope.showRecommendationPanel = false;
@@ -754,11 +753,6 @@ export default class New {
                 $scope.kase.redhatWatchers = _.unionWith($scope.kase.redhatWatchers, [user], (a, b) => (a.ssoUsername === b.ssoUsername))
                 $scope.userToAdd = '';
             }
-        });
-
-        $uibModal.open({
-            template: require('../views/cepModal.jade'),
-            controller: 'CepModal'
         });
 
         $scope.updateCEP = function (isCep) {

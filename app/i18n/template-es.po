@@ -318,7 +318,7 @@ msgstr "Gravedad más alta"
 #: dist/pcm.js:205
 msgid ""
 "If we have not recorded your business hours correctly, please update your "
-"timezone in  <a href='/wapps/ugc/protected/locale.html' target='_blank'>Your "
+"timezone in  <a href=\'${getRedhatDotComHost()}/wapps/ugc/protected/locale.html\' target=\'_blank\'>Your "
 "preferences</a>"
 msgstr ""
 "Si su horario laboral no es correcto, actualice su zona horaria en  <a href="
@@ -755,11 +755,6 @@ msgid "{{days}} business days"
 msgstr "{{days}} días laborales"
 
 #: dist/pcm.js:203
-msgid "{{errorFileName}} cannot be attached because it is a 0 byte file."
-msgstr ""
-"{{errorFileName}} no se puede adjuntar porque es un archivo con 0 bytes."
-
-#: dist/pcm.js:203
 msgid ""
 "{{errorFileName}} cannot be attached because it is larger than "
 "{{errorFileSize}} GB. Please FTP large files to dropbox.redhat.com."
@@ -878,11 +873,11 @@ msgstr "Cuenta"
 #: app/cases/views/accountSearch.html:18
 #: app/cases/views/existingBookmarkedAccounts.html:10
 msgid "Account Name"
-msgstr "Nombre de la cuenta"
+msgstr "Nombre de cuenta"
 
 #: app/cases/views/edit.html:19
 msgid "Account name : {{$parent.CaseService.account.name}}"
-msgstr "Nombre de la cuenta : {{$parent.CaseService.account.name}}"
+msgstr "Nombre de cuenta : {{$parent.CaseService.account.name}}"
 
 #: app/cases/views/edit.html:18
 msgid "Account number : {{$parent.CaseService.account.number}}"
@@ -2439,8 +2434,8 @@ msgstr "Solo análisis de causa raíz (RCA)"
 msgid "Usage / Documentation Help"
 msgstr "Ayuda de documentación/uso"
 
-msgid "Please attach an sosreport (optional)"
-msgstr "Adjunte un sosreport (opcional)"
+msgid "Please attach an {{link}} (optional)"
+msgstr "Adjunte un {{link}} (opcional)"
 
 msgid "PREMIUM"
 msgstr "PREMIUM"
@@ -2472,7 +2467,7 @@ msgstr "Consultor contratado"
 msgid "Consultant Engagement in Progress"
 msgstr "Contratación de consultor en curso"
 
-msgid "Please provide the contact information of Consulting personnel troubleshooting the customer issue. If requested, Support Delivery will use this information to initiate direct contact (i.e. phone, chat) with listed contact(s) in order to provide faster assistance. Primary method of communication will continue to be this Customer Case ticket"
+msgid "Please provide the contact information of Consulting personnel troubleshooting the customer issue. If requested, Support Delivery will use this information to initiate direct contact (i.e. phone, chat) with listed contact(s) in order to provide faster assistance. Primary method of communication will continue to be this Customer Case ticket."
 msgstr "Proporcione la información de contacto del personal de Consultoría encargado de resolver el problema del cliente. Si se solicita, el servicio de Soporte usará esta información para comunicarse directamente (por teléfono o chat) con los contactos listados con el fin de brindar asistencia con mayor rapidez. El método principal de comunicación seguirá siendo este ticket de Caso de cliente."
 
 msgid "Contact Name"
@@ -2487,13 +2482,13 @@ msgstr "Información de contacto"
 msgid "Provide main contact(s) troubleshooting the issue"
 msgstr "Incluya los contactos principales para la solución de problemas."
 
-msgid "Indicate working hours, time zone; specify if not available on certain dates(i.e weekends, holidays)"
+msgid "Indicate working hours, time zone; specify if not available on certain dates (i.e. weekends, holidays)"
 msgstr "Indique el horario de atención y la zona horaria; especifique si no está disponible en determinadas fechas (por ejemplo, fines de semana, días festivos)."
 
 msgid "Please provide phone number, chat ID or email"
 msgstr "Indique su número de teléfono, ID de chat o correo electrónico."
 
-msgid "Provide any pertinent information that Support delivery should be aware of that's not alreadt captured in the case summary or comments"
+msgid "Provide any pertinent information that Support delivery should be aware of that's not already captured in the case summary or comments."
 msgstr "Incluya cualquier información pertinente que el servicio de Soporte deba conocer y que no esté ya incluida en el resumen del caso o en los comentarios."
 
 msgid "Used by consultants to indicate that a consulting engagement is in progress and the issue requires an increased attention from support resources"

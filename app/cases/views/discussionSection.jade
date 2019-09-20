@@ -40,7 +40,7 @@ ul#tab_list.nav.nav-tabs(role="tablist")
                     article.comment.article-comment(ng-if="DiscussionService.isPublicComment(element)")
                         i.fa.fa-comments-o
                         h4.meta
-                            {{::'Message'|translate}}&nbsp;({{::element.created_by_type}})
+                            {{::'Message'|translate}}&nbsp;({{::getTranslatedType(element.created_by_type)}})
                             a.pull-right(ng-if="showJumpToCommentId == element.id" ng-click="jumpToComment(element.id)", ng-href='#/case/{{CaseService.kase.case_number}}?commentId={{element.id}}') Jump to comment
                         .byline
                             author {{::element.last_modified_by}} {{::'on'|translate}}&nbsp;
@@ -58,7 +58,7 @@ ul#tab_list.nav.nav-tabs(role="tablist")
                                 a.ml-5.glyphicon.glyphicon-link(ng-click='CaseService.scrollToComment(element.id)' ng-href='#/case/{{CaseService.kase.case_number}}?commentId={{::element.id}}')
                     article.comment.article-private-comment(ng-if="DiscussionService.isPrivateComment(element)")
                         i.fa.fa-comments-o
-                        h4.meta {{::'Private Message'|translate}}&nbsp;({{element.created_by_type}})
+                        h4.meta {{::'Private Message'|translate}}&nbsp;({{getTranslatedType(element.created_by_type)}})
                             a.pull-right(ng-if="showJumpToCommentId == element.id" ng-click="jumpToComment(element.id)", ng-href='#/case/{{CaseService.kase.case_number}}?commentId={{element.id}}') Jump to comment
                         .byline
                             author {{::element.last_modified_by}} {{::'on'|translate}}&nbsp;

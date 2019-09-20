@@ -933,7 +933,7 @@ describe('Case Services', function () {
         });
         it('should have a method to parse artifact html', function () {
             expect(attachmentsService.parseArtifactHtml).toBeDefined();
-            attachmentsService.suggestedArtifact.description="<b>test</b>";
+            attachmentsService.suggestedArtifact.description="Please attach an <a>Test</a> (optional)";
             var parsedHTML=attachmentsService.parseArtifactHtml();
             expect(parsedHTML).toBeDefined();
 

@@ -15,7 +15,7 @@ export default class AttachLocalFile {
 
         $scope.getAttachFileTT = function (s3Enabled) {
             return s3Enabled ?
-                gettextCatalog.getString('Can now accept large attachments (~250GB)') :
+                gettextCatalog.getString('Can now accept large attachments (~250 GB)') :
                 _.get(AttachmentsService.s3AccountConfigurations, 's3UploadFunctionality') === 'disable_all' ?
                     _.get(AttachmentsService.s3AccountConfigurations, 's3UploadTooltip') : '';
         }

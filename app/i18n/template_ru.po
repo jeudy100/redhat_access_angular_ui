@@ -311,7 +311,7 @@ msgstr "Приоритет (по убыванию)"
 #: dist/pcm.js:205
 msgid ""
 "If we have not recorded your business hours correctly, please update your "
-"timezone in  <a href='/wapps/ugc/protected/locale.html' target='_blank'>Your "
+"timezone in  <a href=\'${getRedhatDotComHost()}/wapps/ugc/protected/locale.html\' target=\'_blank\'>Your "
 "preferences</a>"
 msgstr ""
 "Если вы не указали часы работы, установите часовой пояс в <a href='/wapps/"
@@ -744,10 +744,6 @@ msgstr "{{days}} рабочий день"
 #: dist/pcm.js:214
 msgid "{{days}} business days"
 msgstr "{{days}} рабочих дня"
-
-#: dist/pcm.js:203
-msgid "{{errorFileName}} cannot be attached because it is a 0 byte file."
-msgstr "{{errorFileName}} содержит 0 байт и не может быть добавлен."
 
 #: dist/pcm.js:203
 msgid ""
@@ -2406,8 +2402,8 @@ msgstr "Только анализ первопричин"
 msgid "Usage / Documentation Help"
 msgstr "Справка по использованию/документации"
 
-msgid "Please attach an sosreport (optional)"
-msgstr "Приложите отчет sosreport (необязательно)"
+msgid "Please attach an {{link}} (optional)"
+msgstr "Приложите отчет {{link}} (необязательно)"
 
 msgid "PREMIUM"
 msgstr "PREMIUM"
@@ -2439,7 +2435,7 @@ msgstr "Привлечен консультант"
 msgid "Consultant Engagement in Progress"
 msgstr "Привлечение консультанта"
 
-msgid "Please provide the contact information of Consulting personnel troubleshooting the customer issue. If requested, Support Delivery will use this information to initiate direct contact (i.e. phone, chat) with listed contact(s) in order to provide faster assistance. Primary method of communication will continue to be this Customer Case ticket"
+msgid "Please provide the contact information of Consulting personnel troubleshooting the customer issue. If requested, Support Delivery will use this information to initiate direct contact (i.e. phone, chat) with listed contact(s) in order to provide faster assistance. Primary method of communication will continue to be this Customer Case ticket."
 msgstr "Укажите контактную информацию консультанта, который отвечает за устранение проблемы клиента. По запросу служба поддержки будет использовать эту информацию для прямой связи (по телефону или через чат) с указанными контактными лицами, чтобы быстрее оказать помощь. Основным методом связи останется это обращение в службу поддержки."
 
 msgid "Contact Name"
@@ -2454,13 +2450,13 @@ msgstr "Контактная информация"
 msgid "Provide main contact(s) troubleshooting the issue"
 msgstr "Укажите основных контактных лиц, отвечающих за устранение проблемы."
 
-msgid "Indicate working hours, time zone; specify if not available on certain dates(i.e weekends, holidays)"
+msgid "Indicate working hours, time zone; specify if not available on certain dates (i.e. weekends, holidays)"
 msgstr "Укажите рабочие часы, часовой пояс и возможные даты недоступности (например, выходные или праздники)."
 
 msgid "Please provide phone number, chat ID or email"
 msgstr "Укажите номер телефона, идентификатор в чате или адрес электронной почты."
 
-msgid "Provide any pertinent information that Support delivery should be aware of that's not alreadt captured in the case summary or comments"
+msgid "Provide any pertinent information that Support delivery should be aware of that's not already captured in the case summary or comments."
 msgstr "Предоставьте всю необходимую информацию, которую служба поддержки должна знать, но которая еще не отражена в описании запроса или комментариях."
 
 msgid "Used by consultants to indicate that a consulting engagement is in progress and the issue requires an increased attention from support resources"

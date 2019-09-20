@@ -715,10 +715,6 @@ msgid "{{days}} business days"
 msgstr "{{days}} 工作日"
 
 #: dist/pcm.js:203
-msgid "{{errorFileName}} cannot be attached because it is a 0 byte file."
-msgstr "无法附加 {{errorFileName}}，因为它是一个 0 字节文件。"
-
-#: dist/pcm.js:203
 msgid ""
 "{{errorFileName}} cannot be attached because it is larger than "
 "{{errorFileSize}} GB. Please FTP large files to dropbox.redhat.com."
@@ -2317,8 +2313,8 @@ msgstr "RCA"
 msgid "Usage / Documentation Help"
 msgstr "用法/文档帮助"
 
-msgid "Please attach an sosreport (optional)"
-msgstr "请附上sosreport（可选）"
+msgid "Please attach an {{link}} (optional)"
+msgstr "请附上{{link}}（可选）"
 
 msgid "PREMIUM"
 msgstr "PREMIUM"
@@ -2350,7 +2346,7 @@ msgstr "咨询顾问参与"
 msgid "Consultant Engagement in Progress"
 msgstr "咨询顾问参与进行中"
 
-msgid "Please provide the contact information of Consulting personnel troubleshooting the customer issue. If requested, Support Delivery will use this information to initiate direct contact (i.e. phone, chat) with listed contact(s) in order to provide faster assistance. Primary method of communication will continue to be this Customer Case ticket"
+msgid "Please provide the contact information of Consulting personnel troubleshooting the customer issue. If requested, Support Delivery will use this information to initiate direct contact (i.e. phone, chat) with listed contact(s) in order to provide faster assistance. Primary method of communication will continue to be this Customer Case ticket."
 msgstr "请提供参与对客户问题进行故障排除的咨询顾问的联系信息。如果需要，支持团队将使用此信息与列出的联系人直接联系（如电话联系，在线聊天），以便提供更快的帮助。此客户问题单仍然是进行联系的主要方法"
 
 msgid "Contact Name"
@@ -2365,13 +2361,13 @@ msgstr "联系信息"
 msgid "Provide main contact(s) troubleshooting the issue"
 msgstr "请提供在解决此问题的过程中主要的联系人"
 
-msgid "Indicate working hours, time zone; specify if not available on certain dates(i.e weekends, holidays)"
+msgid "Indicate working hours, time zone; specify if not available on certain dates (i.e. weekends, holidays)"
 msgstr "请提供正常的工作时间、所在的时区，并请指定是否在特定时间（如周末、公共假期）无法进行联系"
 
 msgid "Please provide phone number, chat ID or email"
 msgstr "请提供电话号码、在线聊天 ID 或电子邮件地址"
 
-msgid "Provide any pertinent information that Support delivery should be aware of that's not alreadt captured in the case summary or comments"
+msgid "Provide any pertinent information that Support delivery should be aware of that's not already captured in the case summary or comments."
 msgstr "请提供其他没有包括在问题单概述或内容中的、可能会帮助支持团队解决此问题的信息。"
 
 msgid "Used by consultants to indicate that a consulting engagement is in progress and the issue requires an increased attention from support resources"

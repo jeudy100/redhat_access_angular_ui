@@ -401,12 +401,18 @@ export default class AttachmentsService {
         };
 
         this.parseArtifactHtml = function () {
-            var parsedHtml = '';
             if (RHAUtils.isNotEmpty(this.suggestedArtifact.description)) {
                 var rawHtml = this.suggestedArtifact.description.toString();
-                parsedHtml = $sce.trustAsHtml(rawHtml);
+                if (rawHtml.includes('(optional)') && (rawHtml.includes('Please attach an') || rawHtml.includes('Please attach a'))) {
+                    // url is needed by itself so that the translations will work
+                    const pleaseAttachString = rawHtml.includes('Please attach an') ? 'Please attach an' : 'Please attach a'; 
+                    const link =  rawHtml.split(pleaseAttachString)[1].split('(optional)')[0].trim();
+                    return $sce.trustAsHtml(gettextCatalog.getString('Please attach an {{link}} (optional)', { link: link }));
+                } else {
+                    return $sce.trustAsHtml(rawHtml);
+                }
             }
-            return parsedHtml;
+            return '';
         };
         this.fetchMaxAttachmentSize = function () {
             strataService.values.cases.attachment.size().then(angular.bind(this, function (response) {

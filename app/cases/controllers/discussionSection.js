@@ -429,5 +429,9 @@ export default class DiscussionSection {
             $scope.scrollToComment(commentId);
             $scope.showJumpToCommentId = null;
         }
+
+        $scope.getTranslatedType = (type) => {
+            return gettextCatalog.getString(type);
+        }
     }
 }

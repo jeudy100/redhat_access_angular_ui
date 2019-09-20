@@ -10,21 +10,21 @@
     .col-sm-12
       form
           .form-group
-            label.control-label {{'Subject:'|translate}}
+            label.control-label {{'Subject'|translate}} {{':'}}
             textarea.form-control(
                 maxlength='254',
                 ng-model='CaseService.escalationSubject',
                 ng-disabled='submittingRequest',
                 ng-change='onNewEscalationComment()')
           .form-group
-            label.control-label {{'Description:'|translate}}
+            label.control-label {{'Description'|translate}} {{':'}}
             textarea.form-control(
                 maxlength='2000',
                 ng-model='CaseService.escalationDescription',
                 ng-disabled='submittingRequest',
                 ng-change='onNewEscalationComment()')
           .form-group
-            label.control-label {{'Expectations:'|translate}}
+            label.control-label {{'Expectations'|translate}} {{':'}}
             textarea.form-control(
                 maxlength='2000',
                 ng-model='CaseService.escalationExpectations',

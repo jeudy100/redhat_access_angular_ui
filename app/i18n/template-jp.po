@@ -727,10 +727,6 @@ msgid "{{days}} business days"
 msgstr "{{days}} 営業日"
 
 #: dist/pcm.js:203
-msgid "{{errorFileName}} cannot be attached because it is a 0 byte file."
-msgstr "{{errorFileName}} のサイズが 0 バイトであるため、添付することができません。"
-
-#: dist/pcm.js:203
 msgid ""
 "{{errorFileName}} cannot be attached because it is larger than "
 "{{errorFileSize}} GB. Please FTP large files to dropbox.redhat.com."
@@ -2350,8 +2346,8 @@ msgstr "根本原因分析 (RCA) のみ"
 msgid "Usage / Documentation Help"
 msgstr "使用方法 / ドキュメントヘルプ"
 
-msgid "Please attach an sosreport (optional)"
-msgstr "sosreport を添付してください (オプション)"
+msgid "Please attach an {{link}} (optional)"
+msgstr "{{link}} を添付してください (オプション)"
 
 msgid "PREMIUM"
 msgstr "PREMIUM"
@@ -2383,7 +2379,7 @@ msgstr "コンサルタントが対応中"
 msgid "Consultant Engagement in Progress"
 msgstr "コンサルタントが対応しています"
 
-msgid "Please provide the contact information of Consulting personnel troubleshooting the customer issue. If requested, Support Delivery will use this information to initiate direct contact (i.e. phone, chat) with listed contact(s) in order to provide faster assistance. Primary method of communication will continue to be this Customer Case ticket"
+msgid "Please provide the contact information of Consulting personnel troubleshooting the customer issue. If requested, Support Delivery will use this information to initiate direct contact (i.e. phone, chat) with listed contact(s) in order to provide faster assistance. Primary method of communication will continue to be this Customer Case ticket."
 msgstr "お客様の問題のトラブルシューティングを担当するコンサルタントの連絡先をお知らせください。リクエストがあれば、サポートデリバリーがこの情報を使用して、記載された連絡先に (電話やチャットなどで) 直接連絡し、より迅速に対応します。主要な連絡手段は、引き続きこのカスタマーケースチケットになります"
 
 msgid "Contact Name"
@@ -2398,13 +2394,13 @@ msgstr "連絡先"
 msgid "Provide main contact(s) troubleshooting the issue"
 msgstr "問題のトラブルシューティングを行う主なご担当者の連絡先をお知らせください"
 
-msgid "Indicate working hours, time zone; specify if not available on certain dates(i.e weekends, holidays)"
+msgid "Indicate working hours, time zone; specify if not available on certain dates (i.e. weekends, holidays)"
 msgstr "勤務時間とタイムゾーンを指定してください。(週末や休暇など) 連絡の取れない日があれば、お知らせください"
 
 msgid "Please provide phone number, chat ID or email"
 msgstr "電話番号、チャット ID またはメールアドレスをお知らせください"
 
-msgid "Provide any pertinent information that Support delivery should be aware of that's not alreadt captured in the case summary or comments"
+msgid "Provide any pertinent information that Support delivery should be aware of that's not already captured in the case summary or comments."
 msgstr "ケースサマリーまたはコメント欄に記載されていないが、サポートデリバリーが認識すべき関連情報があれば、すべてお知らせください"
 
 msgid "Used by consultants to indicate that a consulting engagement is in progress and the issue requires an increased attention from support resources"

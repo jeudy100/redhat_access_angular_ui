@@ -57,7 +57,7 @@ export default class AttachmentsSection {
                             strataService.cases.attachments.list(CaseService.kase.case_number).then(function (attachmentsJSON) {
                                 AlertService.removeAlert(uploadingAlert);
                                 AttachmentsService.defineOriginalAttachments(attachmentsJSON);
-                                AlertService.addSuccessMessage(gettextCatalog.getString('Successfully uploaded attachment.'));
+                                AlertService.addSuccessMessage(gettextCatalog.getString('Successfully uploaded attachment'));
                                 CaseService.checkForCaseStatusToggleOnAttachOrComment();
                                 $scope.ieClearSelectedFile();
 
@@ -79,12 +79,12 @@ export default class AttachmentsSection {
                         if (attachmentsJSON.length !== AttachmentsService.originalAttachments.length) {
                             AlertService.removeAlert(uploadingAlert);
                             AttachmentsService.defineOriginalAttachments(attachmentsJSON);
-                            AlertService.addSuccessMessage(gettextCatalog.getString('Successfully uploaded attachment.'));
+                            AlertService.addSuccessMessage(gettextCatalog.getString('Successfully uploaded attachment'));
                             CaseService.checkForCaseStatusToggleOnAttachOrComment();
                             $scope.ieClearSelectedFile();
                         } else {
                             AlertService.removeAlert(uploadingAlert);
-                            AlertService.addDangerMessage(gettextCatalog.getString('Error: Failed to upload attachment.'));
+                            AlertService.addDangerMessage(gettextCatalog.getString('Error: Failed to upload attachment'));
                         }
 
                     }, function (error) {

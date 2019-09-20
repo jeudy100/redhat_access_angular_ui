@@ -4,25 +4,25 @@ uib-accordion
       i.fa.fa-chevron-down(ng-class='{"active": isEscalationOpen}')
       | {{'Escalation ID ' |translate}} {{rmeEscalation.name}}
     dl
-        dt Status
+        dt {{'Status' | translate}}
         dd.reset {{rmeEscalation.status}}
     dl
-        dt Escalation Owner
+        dt {{'Escalation Owner' | translate}}
         dd.reset {{rmeEscalation.owner}}
     dl
-        dt Description
+        dt {{'Description' | translate}}
         dd.reset {{rmeEscalation.subject}}
     dl(ng-show='rmeEscalation.status === "Closed"')
-        dt Closed Date
+        dt {{'Closed Date' | translate}}
         dd.reset {{rmeEscalation.closedDate | date:'medium'}}
     .escalation-actions
         .row(ng-show='!submittingRequest')
             .col-sm-6(ng-show='rmeEscalation.status !== "Closed"')
-                a.btn.btn-app.btn-open-white.btn-block(ng-click='requestUpdateRMEEscalation(rmeEscalation.name)') Request Update
+                a.btn.btn-app.btn-open-white.btn-block(ng-click='requestUpdateRMEEscalation(rmeEscalation.name)') {{'Request Update' | translate}}
             .col-sm-6(ng-show='rmeEscalation.status !== "Closed"')
-                a.btn.btn-app.btn-open-white.btn-block(ng-click='requestClosureRMEEscalation(rmeEscalation.name)') Request Closure
+                a.btn.btn-app.btn-open-white.btn-block(ng-click='requestClosureRMEEscalation(rmeEscalation.name)') {{'Request Closure' | translate}}
             .col-sm-12(ng-show='rmeEscalation.status === "Closed"')
-                a.btn.btn-app.btn-open-white.btn-block(ng-click='requestReOpenRMEEscalation(rmeEscalation.name)') Request Re-Open
+                a.btn.btn-app.btn-open-white.btn-block(ng-click='requestReOpenRMEEscalation(rmeEscalation.name)') {{'Request Re-Open' | translate}}
         .row(ng-show='submittingRequest')
             .col-sm-12.text-center
                 span.spinner.spinner-inline(ng-show='submittingRequest')

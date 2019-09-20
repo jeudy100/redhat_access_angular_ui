@@ -23,7 +23,6 @@ export default class Edit {
         $scope.isShowRmeEscalationBox = false;
         $scope.isCreateRmeEscalationBox = true;
         $scope.ownerTooltip = '';
-        $scope.cepMessage = gettextCatalog.getString("Used by consultants to indicate that a consulting engagement is in progress and the issue requires increased attention from support resources");
         $scope.showCasePage = () => securityService.loginStatus.isLoggedIn && !HeaderService.pageLoadFailure && CaseService.sfdcIsHealthy && securityService.loginStatus.userAllowedToManageCases && !$scope.loading.kase;
 
         $scope.init = function () {
@@ -143,13 +142,13 @@ export default class Edit {
                 const owner = CaseService.hydraCaseDetail.caseOwner;
                 $scope.ownerTooltip = $sce.trustAsHtml(
                     `<div style="text-align: left;">
-                    <b>Name</b>: ${owner.name ? owner.name : ''}<br>
-                    <b>Title</b>: ${owner.title ? owner.title : ''}<br>
-                    <b>Email</b>: ${owner.email ? owner.email : ''}<br> 
-                    <b>Phone</b>: ${owner.mobilePhone ? owner.mobilePhone : ''}<br>
-                    <b>IRC</b>: ${owner.ircNick ? owner.ircNick : ''}<br>
-                    <b>Timezone</b>: ${owner.timeZone ? owner.timeZone : ''}<br>
-                    <b>Office Location</b>: ${owner.officeLocation ? owner.officeLocation : ''}
+                    <b>${gettextCatalog.getString('Name')}</b>: ${owner.name ? owner.name : ''}<br>
+                    <b>${gettextCatalog.getString('Title')}</b>: ${owner.title ? owner.title : ''}<br>
+                    <b>${gettextCatalog.getString('Email')}</b>: ${owner.email ? owner.email : ''}<br> 
+                    <b>${gettextCatalog.getString('Phone')}</b>: ${owner.mobilePhone ? owner.mobilePhone : ''}<br>
+                    <b>${gettextCatalog.getString('IRC')}</b>: ${owner.ircNick ? owner.ircNick : ''}<br>
+                    <b>${gettextCatalog.getString('Timezone')}</b>: ${owner.timeZone ? owner.timeZone : ''}<br>
+                    <b>${gettextCatalog.getString('Office location')}</b>: ${owner.officeLocation ? owner.officeLocation : ''}
                     </div>`
                 );
             } else {

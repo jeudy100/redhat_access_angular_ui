@@ -8,7 +8,7 @@
     .col-sm-12
       form
           .form-group
-            label.control-label {{::'Contact Name: *'|translate}} &nbsp;
+            label.control-label {{::'Contact Name'|translate}} {{::': *'}} &nbsp;
             span.glyphicon.glyphicon-info-sign.text-info(uib-tooltip="{{'Provide main contact(s) troubleshooting the issue' |translate }}")
             input.form-control(
                 maxlength='254',
@@ -17,7 +17,7 @@
                 ng-change='onChangeCepInformation()'
                 name='contact_name')
           .form-group
-            label.control-label {{::'Availability/Working Hours: *'|translate}} &nbsp;
+            label.control-label {{::'Availability/Working Hours'|translate}} {{::': *'}} &nbsp;
             span.glyphicon.glyphicon-info-sign.text-info(uib-tooltip="{{'Indicate working hours, time zone; specify if not available on certain dates (i.e. weekends, holidays)' |translate }}")
             input.form-control(
                         ng-model='cepWorkingHours',
@@ -26,7 +26,7 @@
                         placeholder="{{'M-F 9:00am - 5:00pm EDT'|translate}}"
                         name='working_hours')
           .form-group
-            label.control-label {{::'Contact Information: *'|translate}} &nbsp;
+            label.control-label {{::'Contact Information'|translate}} {{::': *'}} &nbsp;
             span.glyphicon.glyphicon-info-sign.text-info(uib-tooltip="{{'Please provide phone number, chat ID or email' |translate }}")
             textarea.form-control(
                 maxlength='2000',
@@ -36,7 +36,7 @@
                 name='contact_information')
           .form-group
             label.control-label {{::'Notes:'|translate}} &nbsp;
-            span.glyphicon.glyphicon-info-sign.text-info(uib-tooltip='{{"Provide any pertinent information that Support Delivery should be aware of that\'s not already captured in the case summary or comments."|translate }}')
+            span.glyphicon.glyphicon-info-sign.text-info(uib-tooltip='{{getNotesTooltip()}}')
             textarea.form-control(
                 maxlength='2000',
                 ng-model='cepNotes',

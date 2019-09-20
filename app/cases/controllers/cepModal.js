@@ -82,5 +82,7 @@ export default class CepModal {
                 $scope.showErrorMessage(error);
             }
         };
+
+        $scope.getNotesTooltip = () => gettextCatalog.getString("Provide any pertinent information that Support delivery should be aware of that's not already captured in the case summary or comments.")
     }
 }

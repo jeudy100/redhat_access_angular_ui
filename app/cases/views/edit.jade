@@ -71,7 +71,7 @@ div.edit(ng-if='showCasePage()')
                 ng-change="updateCEP(CaseService.kase.cep)"
                 name="cepCheckbox")
                 span &nbsp;
-                span.glyphicon.glyphicon-info-sign.text-info(uib-tooltip="{{cepMessage}}")
+                span.glyphicon.glyphicon-info-sign.text-info(uib-tooltip="{{'Used by consultants to indicate that a consulting engagement is in progress and the issue requires an increased attention from support resources' | translate}}")
 
       section.case-discussion(ng-show='$parent.CaseService.eligiblePartnersToShareCase.length > 0 || $parent.CaseService.savedPartners.length > 0')
           share-case-with-partner

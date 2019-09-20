@@ -771,12 +771,6 @@ msgid "{{days}} business days"
 msgstr "{{days}} jours ouvrables"
 
 #: dist/pcm.js:203
-msgid "{{errorFileName}} cannot be attached because it is a 0 byte file."
-msgstr ""
-"{{errorFileName}} ne peut pas être joint car il s'agit d'un fichier à 0 "
-"octet."
-
-#: dist/pcm.js:203
 msgid ""
 "{{errorFileName}} cannot be attached because it is larger than "
 "{{errorFileSize}} GB. Please FTP large files to dropbox.redhat.com."
@@ -1090,10 +1084,6 @@ msgstr "Groupe de dossiers (optionnel)"
 #: app/cases/views/new.html:120
 msgid "Send Additional Email Notifications to"
 msgstr "Envoyer des E-mails de notification supplémentaires à"
-
-#: app/cases/views/new.html:120
-msgid "By opening this case you will automatically receive notifications."
-msgstr "En ouvrant ce ticket vous recevrez automatiquement des notifications."
 
 #: app/cases/views/createGroupModal.html:10
 msgid "Case Group:"
@@ -2485,8 +2475,8 @@ msgstr "RCA seulement"
 msgid "Usage / Documentation Help"
 msgstr "Aide sur l'utilisation / la documentation"
 
-msgid "Please attach an sosreport (optional)"
-msgstr "Veuillez joindre un rapport de sécurité (SOS Report) (facultatif)"
+msgid "Please attach an {{link}} (optional)"
+msgstr "Veuillez joindre un rapport de sécurité ({{link}}) (facultatif)"
 
 msgid "PREMIUM"
 msgstr "PREMIUM"
@@ -2518,7 +2508,7 @@ msgstr "Consultant responsable"
 msgid "Consultant Engagement in Progress"
 msgstr "Travail des consultants, en cours"
 
-msgid "Please provide the contact information of Consulting personnel troubleshooting the customer issue. If requested, Support Delivery will use this information to initiate direct contact (i.e. phone, chat) with listed contact(s) in order to provide faster assistance. Primary method of communication will continue to be this Customer Case ticket"
+msgid "Please provide the contact information of Consulting personnel troubleshooting the customer issue. If requested, Support Delivery will use this information to initiate direct contact (i.e. phone, chat) with listed contact(s) in order to provide faster assistance. Primary method of communication will continue to be this Customer Case ticket."
 msgstr "Veuillez fournir les informations de contact du personnel spécialisé chargé de résoudre le problème du client. Si nécessaire, notre service d’assistance utilisera ces informations pour établir un contact direct (par exemple, un téléphone, une discussion en ligne) avec le (s) contact (s) indiqué (s) afin de procurer une assistance plus rapide. La méthode principale de communication continuera à être ce ticket de cas client"
 
 msgid "Contact Name"
@@ -2533,13 +2523,13 @@ msgstr "Informations de contact"
 msgid "Provide main contact(s) troubleshooting the issue"
 msgstr "Indiquez le ou les contacts principaux pour résoudre le problème"
 
-msgid "Indicate working hours, time zone; specify if not available on certain dates(i.e weekends, holidays)"
+msgid "Indicate working hours, time zone; specify if not available on certain dates (i.e. weekends, holidays)"
 msgstr "Indiquez les heures de travail, le fuseau horaire; spécifier si non disponible à certaines dates (week-end, jours fériés)"
 
 msgid "Please provide phone number, chat ID or email"
 msgstr "Veuillez fournir le numéro de téléphone, ID de chat ou email"
 
-msgid "Provide any pertinent information that Support delivery should be aware of that's not alreadt captured in the case summary or comments"
+msgid "Provide any pertinent information that Support delivery should be aware of that's not already captured in the case summary or comments."
 msgstr "Fournissez toute information pertinente utile au service d'assistance qui ne serait pas déjà consignée dans le résumé du cas ou les commentaires."
 
 msgid "Used by consultants to indicate that a consulting engagement is in progress and the issue requires an increased attention from support resources"

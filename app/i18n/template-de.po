@@ -96,7 +96,7 @@ msgstr ""
 #: app/cases/views/existingBookmarkedAccounts.html:9
 #: node_modules/redhat_access_pcm_ascension_common/dist/redhat_access_pcm_ascension_common.js:1676
 msgid "Account Number"
-msgstr "Account-Nummer:"
+msgstr "Kontonummer:"
 
 # translation auto-copied from project Customer Portal Translations, version PCM_strings, document template, author jdimanos
 #: dist/pcm.js:201
@@ -327,7 +327,7 @@ msgstr "Höchster Schweregrad"
 #: dist/pcm.js:205
 msgid ""
 "If we have not recorded your business hours correctly, please update your "
-"timezone in  <a href='/wapps/ugc/protected/locale.html' target='_blank'>Your "
+"timezone in  <a href=\'${getRedhatDotComHost()}/wapps/ugc/protected/locale.html\' target=\'_blank\'>Your "
 "preferences</a>"
 msgstr ""
 "Falls wir Ihre Geschäftszeiten nicht korrekt festgehalten haben, so "
@@ -764,11 +764,6 @@ msgid "{{days}} business days"
 msgstr "{{days}} Werktage"
 
 #: dist/pcm.js:203
-msgid "{{errorFileName}} cannot be attached because it is a 0 byte file."
-msgstr ""
-"{{errorFileName}} kann nicht angehängt werden, da es eine 0 Byte Datei ist."
-
-#: dist/pcm.js:203
 msgid ""
 "{{errorFileName}} cannot be attached because it is larger than "
 "{{errorFileSize}} GB. Please FTP large files to dropbox.redhat.com."
@@ -889,19 +884,19 @@ msgstr "Account"
 #: app/cases/views/accountSearch.html:18
 #: app/cases/views/existingBookmarkedAccounts.html:10
 msgid "Account Name"
-msgstr "Accountname"
+msgstr "Kontoname"
 
 #: app/cases/views/edit.html:19
 msgid "Account name : {{$parent.CaseService.account.name}}"
-msgstr "Account-Name : {{$parent.CaseService.account.name}}"
+msgstr "Kontoname : {{$parent.CaseService.account.name}}"
 
 #: app/cases/views/edit.html:18
 msgid "Account number : {{$parent.CaseService.account.number}}"
-msgstr "Account-Nummer: {{$parent.CaseService.account.number}}"
+msgstr "Kontonummer : {{$parent.CaseService.account.number}}"
 
 #: app/cases/views/accountSearch.html:6
-msgid "Account number:&nbsp;"
-msgstr "Account-Nummer:&nbsp;"
+msgid "Kontonummer:&nbsp;"
+msgstr "Kontonummer:&nbsp;"
 
 #: app/cases/views/accountSearch.html:12
 msgid ""
@@ -909,7 +904,7 @@ msgid ""
 "correct."
 msgstr ""
 "Es ist kein Account mit dieser Nummer vorhanden. Überprüfen Sie, ob die "
-"Account-Nummer korrekt ist."
+"Kontonummer korrekt ist."
 
 #: app/cases/views/discussionSection.html:7
 msgid "Action Plan"
@@ -1218,7 +1213,7 @@ msgstr "SOLR-Anfrage eingeben, zum Beispiel:"
 
 #: app/cases/views/accountSearch.html:9
 msgid "Enter account number"
-msgstr "Account-Nummer eingeben"
+msgstr "Kontonummer eingeben"
 
 #: app/search/views/resultDetail.html:4
 msgid "Environment"
@@ -1288,7 +1283,7 @@ msgstr "Dateiname"
 # translation auto-copied from project Customer Portal Translations, version PortalCaseManagementStrings, document PortalCaseManagementStrings, author hpeters
 #: app/cases/views/accountSelect.html:5
 msgid "Find My Account Number"
-msgstr "Meine Account-Nummer suchen"
+msgstr "Meine Kontonummer suchen"
 
 #: app/cases/views/accountSearch.html:3
 msgid "Find an account"
@@ -2447,8 +2442,8 @@ msgstr "Nur RCA"
 msgid "Usage / Documentation Help"
 msgstr "Hilfe zur Verwendung/Dokumentation"
 
-msgid "Please attach an sosreport (optional)"
-msgstr "Bitte fügen Sie einen Sosreport bei (optional)"
+msgid "Please attach an {{link}} (optional)"
+msgstr "Bitte fügen Sie einen {{link}} bei (optional)"
 
 msgid "PREMIUM"
 msgstr "PREMIUM"
@@ -2480,7 +2475,7 @@ msgstr "Berater engagiert"
 msgid "Consultant Engagement in Progress"
 msgstr "Engagement des Beraters in Bearbeitung"
 
-msgid "Please provide the contact information of Consulting personnel troubleshooting the customer issue. If requested, Support Delivery will use this information to initiate direct contact (i.e. phone, chat) with listed contact(s) in order to provide faster assistance. Primary method of communication will continue to be this Customer Case ticket"
+msgid "Please provide the contact information of Consulting personnel troubleshooting the customer issue. If requested, Support Delivery will use this information to initiate direct contact (i.e. phone, chat) with listed contact(s) in order to provide faster assistance. Primary method of communication will continue to be this Customer Case ticket."
 msgstr "Bitte geben Sie zur Problembehandlung des Kundenproblems die Kontaktinformationen des Consulting-Personals an. Auf Wunsch verwendet Support Delivery diese Informationen, um einen direkten Kontakt (z. B. Telefon, Chat) mit der/den aufgelisteten Kontaktperson(en) herzustellen, um schneller Hilfe zu leisten. Primäre Kommunikationsmethode ist weiterhin dieses Customer Case Ticket"
 
 msgid "Contact Name"
@@ -2495,13 +2490,13 @@ msgstr "Kontaktinformationen"
 msgid "Provide main contact(s) troubleshooting the issue"
 msgstr "Bereitstellung des Hauptkontakts/der Hauptkontakte zur Fehlerbehandlung des Problems"
 
-msgid "Indicate working hours, time zone; specify if not available on certain dates(i.e weekends, holidays)"
+msgid "Indicate working hours, time zone; specify if not available on certain dates (i.e. weekends, holidays)"
 msgstr "Geben Sie Arbeitszeiten und Zeitzonen an; geben Sie an, ob die Person an bestimmten Tagen (z. B. Wochenenden, Feiertage) nicht verfügbar ist"
 
 msgid "Please provide phone number, chat ID or email"
 msgstr "Bitte geben Sie Telefonnummer, Chat-ID oder E-Mail-Adresse an"
 
-msgid "Provide any pertinent information that Support delivery should be aware of that's not alreadt captured in the case summary or comments"
+msgid "Provide any pertinent information that Support delivery should be aware of that's not already captured in the case summary or comments."
 msgstr "Geben Sie alle relevanten Informationen an, die der Support kennen sollte und die nicht bereits in der Fallübersicht oder in den Kommentaren erfasst sind"
 
 msgid "Used by consultants to indicate that a consulting engagement is in progress and the issue requires an increased attention from support resources"
@@ -2555,7 +2550,7 @@ msgstr "Das Problem gravierender ist als ursprünglich angenommen;"
 msgid "ACE Escalation"
 msgstr "ACE-Eskalation"
 
-msgid "Showing 1 - 48 of 48 results"
+msgid "Showing {{firstNumOfResults}} - {{lastNumOfResults}} of {{totalNumOfResults}} results"
 msgstr "1–48 von 48 Ergebnissen werden gezeigt"
 
 msgid "Show per page"
