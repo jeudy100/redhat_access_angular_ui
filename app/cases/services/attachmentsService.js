@@ -351,9 +351,9 @@ export default class AttachmentsService {
 
                                     attachment.uploadComplete = true;
                                     attachment.verifyingUpload = false;
-                                    AlertService.addSuccessMessage(gettextCatalog.getString('Successfully uploaded attachment {{filename}} to case {{id}}', {
-                                        filename: attachment.fileObj.name,
-                                        id: caseId
+                                    AlertService.addSuccessMessage(gettextCatalog.getString('Successfully uploaded attachment {{attachmentName}} to case {{caseNumber}}', {
+                                        attachmentName: attachment.fileObj.name,
+                                        caseNumber: caseId
                                     }));
                                     this.removeUpdatedAttachment(attachment.updatedAttachmentsIndex);
 

@@ -2630,17 +2630,17 @@ msgstr "Allegato caricato"
 msgid "Could not upload"
 msgstr "Impossibile caricare"
 
-msgid "{{file name}} cannot be attached because it is a 0 byte file."
-msgstr "Impossibile allegare {{file name}}: dimensioni pari a 0 byte."
+msgid "{{fileName}} cannot be attached because it is a 0 byte file."
+msgstr "Impossibile allegare {{fileName}}: dimensioni pari a 0 byte."
 
-msgid "{{file name}} cannot be attached because it is larger than {{file size}} GB. Please FTP large files to dropbox.redhat.com."
-msgstr "Impossibile allegare {{file name}}: dimensioni superiori a {{file size}} GB. Invia file di grandi dimensioni tramite FTP su dropbox.redhat.com."
+msgid "{{fileName}} cannot be attached because it is larger than {{fileSize}} GB. Please FTP large files to dropbox.redhat.com."
+msgstr "Impossibile allegare {{fileName}}: dimensioni superiori a {{fileSize}} GB. Invia file di grandi dimensioni tramite FTP su dropbox.redhat.com."
 
-msgid "{{file name}} cannot be attached because it is larger than 1 TB."
-msgstr "Impossibile allegare {{file name}}: dimensioni superiori a 1 TB."
+msgid "{{fileName}} cannot be attached because it is larger than 1 TB."
+msgstr "Impossibile allegare {{fileName}}: dimensioni superiori a 1 TB."
 
-msgid "{{file name}} cannot be read by the browser. Check your privileges and make sure you are allowed to read the file."
-msgstr "{{file name}} non può essere letto dal browser. Controlla i tuoi privilegi e assicurati di poter leggere il file."
+msgid "{{fileName}} cannot be read by the browser. Check your privileges and make sure you are allowed to read the file."
+msgstr "{{fileName}} non può essere letto dal browser. Controlla i tuoi privilegi e assicurati di poter leggere il file."
 
 msgid "Could not fetch custom notification emails"
 msgstr "Impossibile recuperare le e-mail di notifica personalizzate"
@@ -2650,3 +2650,6 @@ msgstr "Impossibile pubblicare e-mail personalizzate"
 
 msgid "Could not delete custom email"
 msgstr "Impossibile eliminare e-mail personalizzate"
+
+msgid "Successfully uploaded attachment"
+msgstr "Allegato caricato"

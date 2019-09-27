@@ -2634,17 +2634,17 @@ msgstr "Anexo enviado com sucesso"
 msgid "Could not upload"
 msgstr "Não foi possível fazer upload"
 
-msgid "{{file name}} cannot be attached because it is a 0 byte file."
-msgstr "{{file name}} não pode ser anexado porque é um arquivo de 0 byte."
+msgid "{{fileName}} cannot be attached because it is a 0 byte file."
+msgstr "{{fileName}} não pode ser anexado porque é um arquivo de 0 byte."
 
-msgid "{{file name}} cannot be attached because it is larger than {{file size}} GB. Please FTP large files to dropbox.redhat.com."
-msgstr "{{file name}} não pode ser anexado porque tem mais de {{file size}} GB. Envie arquivos grandes de FTP para dropbox.redhat.com."
+msgid "{{fileName}} cannot be attached because it is larger than {{fileSize}} GB. Please FTP large files to dropbox.redhat.com."
+msgstr "{{fileName}} não pode ser anexado porque tem mais de {{fileSize}} GB. Envie arquivos grandes de FTP para dropbox.redhat.com."
 
-msgid "{{file name}} cannot be attached because it is larger than 1 TB."
-msgstr "{{file name}} não pode ser anexado porque tem mais de 1 TB."
+msgid "{{fileName}} cannot be attached because it is larger than 1 TB."
+msgstr "{{fileName}} não pode ser anexado porque tem mais de 1 TB."
 
-msgid "{{file name}} cannot be read by the browser. Check your privileges and make sure you are allowed to read the file."
-msgstr "{{file name}} não pode ser lido pelo navegador. Verifique seus privilégios e certifique-se de ter permissão para ler o arquivo."
+msgid "{{fileName}} cannot be read by the browser. Check your privileges and make sure you are allowed to read the file."
+msgstr "{{fileName}} não pode ser lido pelo navegador. Verifique seus privilégios e certifique-se de ter permissão para ler o arquivo."
 
 msgid "Could not fetch custom notification emails"
 msgstr "Não foi possível obter e-mails de notificação personalizados"
@@ -2654,3 +2654,6 @@ msgstr "Não foi possível publicar o e-mail personalizado"
 
 msgid "Could not delete custom email"
 msgstr "Não foi possível excluir o e-mail personalizado"
+
+msgid "Successfully uploaded attachment"
+msgstr "Anexo enviado com sucesso"

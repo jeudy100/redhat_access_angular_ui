@@ -2632,17 +2632,17 @@ msgstr "Archivos adjuntos cargados correctamente"
 msgid "Could not upload"
 msgstr "No fue posible completar la carga"
 
-msgid "{{file name}} cannot be attached because it is a 0 byte file."
-msgstr "{{file name}} no se puede ajuntar porque es un archivo de 0 bytes."
+msgid "{{fileName}} cannot be attached because it is a 0 byte file."
+msgstr "{{fileName}} no se puede ajuntar porque es un archivo de 0 bytes."
 
-msgid "{{file name}} cannot be attached because it is larger than {{file size}} GB. Please FTP large files to dropbox.redhat.com."
-msgstr "{{file name}} no se puede adjuntar porque su tamaño excede los {{file size}} GB. Suba los archivos grandes por FTP a dropbox.redhat.com."
+msgid "{{fileName}} cannot be attached because it is larger than {{fileSize}} GB. Please FTP large files to dropbox.redhat.com."
+msgstr "{{fileName}} no se puede adjuntar porque su tamaño excede los {{fileSize}} GB. Suba los archivos grandes por FTP a dropbox.redhat.com."
 
-msgid "{{file name}} cannot be attached because it is larger than 1 TB."
-msgstr "{{file name}} no se puede adjuntar porque su tamaño es mayor a 1 TB."
+msgid "{{fileName}} cannot be attached because it is larger than 1 TB."
+msgstr "{{fileName}} no se puede adjuntar porque su tamaño es mayor a 1 TB."
 
-msgid "{{file name}} cannot be read by the browser. Check your privileges and make sure you are allowed to read the file."
-msgstr "El explorador no puede leer {{file name}}. Compruebe sus privilegios y asegúrese de contar con los permisos necesarios para leer el archivo."
+msgid "{{fileName}} cannot be read by the browser. Check your privileges and make sure you are allowed to read the file."
+msgstr "El explorador no puede leer {{fileName}}. Compruebe sus privilegios y asegúrese de contar con los permisos necesarios para leer el archivo."
 
 msgid "Could not fetch custom notification emails"
 msgstr "No se pudo acceder a los correos electrónicos de notificación personalizados."
@@ -2652,3 +2652,6 @@ msgstr "No se pudo registrar el correo electrónico personalizado."
 
 msgid "Could not delete custom email"
 msgstr "No se pudo eliminar el correo electrónico personalizado."
+
+msgid "Successfully uploaded attachment"
+msgstr "Archivos adjuntos cargados correctamente"

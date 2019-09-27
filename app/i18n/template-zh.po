@@ -2511,17 +2511,17 @@ msgstr "上传附件成功"
 msgid "Could not upload"
 msgstr "无法上传"
 
-msgid "{{file name}} cannot be attached because it is a 0 byte file."
-msgstr "{{file name}} 无法附加，因为它是一个空文件。"
+msgid "{{fileName}} cannot be attached because it is a 0 byte file."
+msgstr "{{fileName}} 无法附加，因为它是一个空文件。"
 
-msgid "{{file name}} cannot be attached because it is larger than {{file size}} GB. Please FTP large files to dropbox.redhat.com."
-msgstr "{{file name}} 无法附件，因为它大于 {{file size}} GB。请使用 FTP 把大文件传到 dropbox.redhat.com。"
+msgid "{{fileName}} cannot be attached because it is larger than {{fileSize}} GB. Please FTP large files to dropbox.redhat.com."
+msgstr "{{fileName}} 无法附件，因为它大于 {{fileSize}} GB。请使用 FTP 把大文件传到 dropbox.redhat.com。"
 
-msgid "{{file name}} cannot be attached because it is larger than 1 TB."
-msgstr "{{file name}} 无法附加，因为它大于1 TB。"
+msgid "{{fileName}} cannot be attached because it is larger than 1 TB."
+msgstr "{{fileName}} 无法附加，因为它大于1 TB。"
 
-msgid "{{file name}} cannot be read by the browser. Check your privileges and make sure you are allowed to read the file."
-msgstr "{{file name}} 无法被浏览器读取。检查您的权限，并确保您可以阅读该文件。"
+msgid "{{fileName}} cannot be read by the browser. Check your privileges and make sure you are allowed to read the file."
+msgstr "{{fileName}} 无法被浏览器读取。检查您的权限，并确保您可以阅读该文件。"
 
 msgid "Could not fetch custom notification emails"
 msgstr "无法提取自定义通知电子邮件"
@@ -2531,3 +2531,6 @@ msgstr "无法发布自定义电子邮件"
 
 msgid "Could not delete custom email"
 msgstr "无法删除自定义电子邮件"
+
+msgid "Successfully uploaded attachment"
+msgstr "上传附件成功"

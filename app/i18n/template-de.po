@@ -2640,17 +2640,17 @@ msgstr "Erfolgreich hochgeladener Anhang"
 msgid "Could not upload"
 msgstr "Konnte nicht hochgeladen werden"
 
-msgid "{{file name}} cannot be attached because it is a 0 byte file."
-msgstr "{{file name}} kann nicht angehängt werden, da die Datei eine Größe von 0 Byte aufweist."
+msgid "{{fileName}} cannot be attached because it is a 0 byte file."
+msgstr "{{fileName}} kann nicht angehängt werden, da die Datei eine Größe von 0 Byte aufweist."
 
-msgid "{{file name}} cannot be attached because it is larger than {{file size}} GB. Please FTP large files to dropbox.redhat.com."
-msgstr "{{file name}} konnte nicht angehängt werden, da die Datei größer ist als {{file size}} GB. Bitte große FTP Dateien auf dropbox.redhat.com hochladen."
+msgid "{{fileName}} cannot be attached because it is larger than {{fileSize}} GB. Please FTP large files to dropbox.redhat.com."
+msgstr "{{fileName}} konnte nicht angehängt werden, da die Datei größer ist als {{fileSize}} GB. Bitte große FTP Dateien auf dropbox.redhat.com hochladen."
 
-msgid "{{file name}} cannot be attached because it is larger than 1 TB."
-msgstr "{{file name}} kann nicht angehängt werden, da die Datei größer ist als 1 TB."
+msgid "{{fileName}} cannot be attached because it is larger than 1 TB."
+msgstr "{{fileName}} kann nicht angehängt werden, da die Datei größer ist als 1 TB."
 
-msgid "{{file name}} cannot be read by the browser. Check your privileges and make sure you are allowed to read the file."
-msgstr "{{file name}} kann vom Browser nicht gelesen werden. Überprüfen Sie Ihre Berechtigungen und stellen Sie sicher, dass Sie die Datei lesen dürfen."
+msgid "{{fileName}} cannot be read by the browser. Check your privileges and make sure you are allowed to read the file."
+msgstr "{{fileName}} kann vom Browser nicht gelesen werden. Überprüfen Sie Ihre Berechtigungen und stellen Sie sicher, dass Sie die Datei lesen dürfen."
 
 msgid "Could not fetch custom notification emails"
 msgstr "Benutzerdefinierte Benachrichtigungs-E-Mails konnten nicht abgerufen werden"
@@ -2660,3 +2660,6 @@ msgstr "Benutzerdefinierte E-Mails konnten nicht veröffentlicht werden"
 
 msgid "Could not delete custom email"
 msgstr "Benutzerdefinierte E-Mails konnten nicht gelöscht werden"
+
+msgid "Successfully uploaded attachment"
+msgstr "Erfolgreich hochgeladener Anhang"

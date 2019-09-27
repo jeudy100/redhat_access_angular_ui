@@ -2673,17 +2673,17 @@ msgstr "Pièce jointe téléchargée avec succès"
 msgid "Could not upload"
 msgstr "Impossible de télécharger"
 
-msgid "{{file name}} cannot be attached because it is a 0 byte file."
-msgstr "{{file name}} ne peut pas être attaché car il s’agit d’un fichier de 0 octet."
+msgid "{{fileName}} cannot be attached because it is a 0 byte file."
+msgstr "{{fileName}} ne peut pas être attaché car il s’agit d’un fichier de 0 octet."
 
-msgid "{{file name}} cannot be attached because it is larger than {{file size}} GB. Please FTP large files to dropbox.redhat.com."
-msgstr "{{file name}} ne peut pas être attaché car il s’agit d’un fichier de {{file size}} Go. Veuillez transférer les gros fichiers FTP dans dropbox.redhat.com."
+msgid "{{fileName}} cannot be attached because it is larger than {{fileSize}} GB. Please FTP large files to dropbox.redhat.com."
+msgstr "{{fileName}} ne peut pas être attaché car il s’agit d’un fichier de {{fileSize}} Go. Veuillez transférer les gros fichiers FTP dans dropbox.redhat.com."
 
-msgid "{{file name}} cannot be attached because it is larger than 1 TB."
-msgstr "{{file name}} ne peut pas être attaché car il s’agit d’un fichier d’ 1To."
+msgid "{{fileName}} cannot be attached because it is larger than 1 TB."
+msgstr "{{fileName}} ne peut pas être attaché car il s’agit d’un fichier d’ 1To."
 
-msgid "{{file name}} cannot be read by the browser. Check your privileges and make sure you are allowed to read the file."
-msgstr "{{file name}} ne peut pas être lu par le navigateur. Vérifiez vos privilèges et assurez-vous que vous êtes autorisé à lire le fichier."
+msgid "{{fileName}} cannot be read by the browser. Check your privileges and make sure you are allowed to read the file."
+msgstr "{{fileName}} ne peut pas être lu par le navigateur. Vérifiez vos privilèges et assurez-vous que vous êtes autorisé à lire le fichier."
 
 msgid "Could not fetch custom notification emails"
 msgstr "Impossible de récupérer les e-mails de notification personnalisés"
@@ -2693,3 +2693,6 @@ msgstr "Impossible de poster un email personnalisé"
 
 msgid "Could not delete custom email"
 msgstr "Impossible de supprimer le courrier électronique personnalisé"
+
+msgid "Successfully uploaded attachment"
+msgstr "Pièce jointe téléchargée avec succès"

@@ -2545,17 +2545,17 @@ msgstr "첨부 파일을 업로드했습니다."
 msgid "Could not upload"
 msgstr "업로드할 수 없습니다."
 
-msgid "{{file name}} cannot be attached because it is a 0 byte file."
-msgstr "{{file name}} 파일은 0 바이트이므로 첨부할 수 없습니다."
+msgid "{{fileName}} cannot be attached because it is a 0 byte file."
+msgstr "{{fileName}} 파일은 0 바이트이므로 첨부할 수 없습니다."
 
-msgid "{{file name}} cannot be attached because it is larger than {{file size}} GB. Please FTP large files to dropbox.redhat.com."
-msgstr "{{file name}}은/는 {{file size}} GB를 초과하기 때문에 첨부할 수 없습니다. 대용량 파일을 dropbox.redhat.com으로 전송하려면 FTP를 사용하십시오."
+msgid "{{fileName}} cannot be attached because it is larger than {{fileSize}} GB. Please FTP large files to dropbox.redhat.com."
+msgstr "{{fileName}}은/는 {{fileSize}} GB를 초과하기 때문에 첨부할 수 없습니다. 대용량 파일을 dropbox.redhat.com으로 전송하려면 FTP를 사용하십시오."
 
-msgid "{{file name}} cannot be attached because it is larger than 1 TB."
-msgstr "{{file name}}은/는 1 TB를 초과하기 때문에 첨부할 수 없습니다."
+msgid "{{fileName}} cannot be attached because it is larger than 1 TB."
+msgstr "{{fileName}}은/는 1 TB를 초과하기 때문에 첨부할 수 없습니다."
 
-msgid "{{file name}} cannot be read by the browser. Check your privileges and make sure you are allowed to read the file."
-msgstr "{{file name}}은/는 브라우저에서 읽을 수 없습니다. 권한을 확인하고 파일을 읽을 수 있는지 확인하십시오."
+msgid "{{fileName}} cannot be read by the browser. Check your privileges and make sure you are allowed to read the file."
+msgstr "{{fileName}}은/는 브라우저에서 읽을 수 없습니다. 권한을 확인하고 파일을 읽을 수 있는지 확인하십시오."
 
 msgid "Could not fetch custom notification emails"
 msgstr "사용자 정의 알림 이메일을 받을 수 없습니다."
@@ -2565,3 +2565,6 @@ msgstr "사용자 정의 이메일을 게시할 수 없습니다."
 
 msgid "Could not delete custom email"
 msgstr "사용자 정의 이메일을 삭제할 수 없습니다."
+
+msgid "Successfully uploaded attachment"
+msgstr "첨부 파일을 업로드했습니다."

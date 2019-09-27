@@ -280,11 +280,7 @@ msgstr ""
 msgid "Enter <b>or</b> to continue with the query."
 msgstr ""
 
-#: dist/pcm.js:2049
-msgid "Error: Failed to upload attachment"
-msgstr ""
-
-#: dist/pcm.js:2047
+#: dist/pcm.js:2047 dist/pcm.js:2049
 msgid "Error: Failed to upload attachment."
 msgstr ""
 
@@ -655,10 +651,6 @@ msgid ""
 "Successfully uploaded attachment {{attachmentName}} to case {{caseNumber}}"
 msgstr ""
 
-#: dist/pcm.js:3929
-msgid "Successfully uploaded attachment {{filename}} to case {{id}}"
-msgstr ""
-
 #: dist/pcm.js:187 app/cases/views/advancedSearchCaseList.html:5
 #: node_modules/redhat_access_pcm_ascension_common/dist/redhat_access_pcm_ascension_common.js:22330
 msgid "Summary"
@@ -842,23 +834,23 @@ msgid "{{days}} business days"
 msgstr ""
 
 #: dist/pcm.js:2048
-msgid "{{errorFileName}} cannot be attached because it is a 0 byte file."
+msgid "{{fileName}} cannot be attached because it is a 0 byte file."
 msgstr ""
 
 #: dist/pcm.js:2048
-msgid "{{errorFileName}} cannot be attached because it is larger than 1 TB."
-msgstr ""
-
-#: dist/pcm.js:2048
-msgid ""
-"{{errorFileName}} cannot be attached because it is larger than "
-"{{errorFileSize}} GB. Please FTP large files to dropbox.redhat.com."
+msgid "{{fileName}} cannot be attached because it is larger than 1 TB."
 msgstr ""
 
 #: dist/pcm.js:2048
 msgid ""
-"{{errorFileName}} cannot be read by the browser. Check your privileges and "
-"make sure you are allowed to read the file."
+"{{fileName}} cannot be attached because it is larger than {{fileSize}} GB. "
+"Please FTP large files to dropbox.redhat.com."
+msgstr ""
+
+#: dist/pcm.js:2048
+msgid ""
+"{{fileName}} cannot be read by the browser. Check your privileges and make "
+"sure you are allowed to read the file."
 msgstr ""
 
 #: dist/pcm.js:3930

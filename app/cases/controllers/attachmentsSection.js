@@ -84,7 +84,7 @@ export default class AttachmentsSection {
                             $scope.ieClearSelectedFile();
                         } else {
                             AlertService.removeAlert(uploadingAlert);
-                            AlertService.addDangerMessage(gettextCatalog.getString('Error: Failed to upload attachment'));
+                            AlertService.addDangerMessage(gettextCatalog.getString('Error: Failed to upload attachment.'));
                         }
 
                     }, function (error) {

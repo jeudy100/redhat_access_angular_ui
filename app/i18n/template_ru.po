@@ -868,15 +868,15 @@ msgstr "Имя учетной записи"
 
 #: app/cases/views/edit.html:19
 msgid "Account name : {{$parent.CaseService.account.name}}"
-msgstr "Имя учетной записи: {{$parent.CaseService.account.name}}"
+msgstr "Имя аккаунта: {{$parent.CaseService.account.name}}"
 
 #: app/cases/views/edit.html:18
 msgid "Account number : {{$parent.CaseService.account.number}}"
-msgstr "Номер учетной записи: {{$parent.CaseService.account.number}}"
+msgstr "Номер аккаунта : {{$parent.CaseService.account.number}}"
 
 #: app/cases/views/accountSearch.html:6
 msgid "Account number:&nbsp;"
-msgstr "Номер учетной записи:&nbsp;"
+msgstr "Номер аккаунта:&nbsp;"
 
 #: app/cases/views/accountSearch.html:12
 msgid ""
@@ -2600,17 +2600,17 @@ msgstr "Вложение успешно передано"
 msgid "Could not upload"
 msgstr "Не удалось передать"
 
-msgid "{{file name}} cannot be attached because it is a 0 byte file."
-msgstr "Невозможно прикрепить {{file name}}, так как это файл размером 0 байт."
+msgid "{{fileName}} cannot be attached because it is a 0 byte file."
+msgstr "Невозможно прикрепить {{fileName}}, так как это файл размером 0 байт."
 
-msgid "{{file name}} cannot be attached because it is larger than {{file size}} GB. Please FTP large files to dropbox.redhat.com."
-msgstr "Невозможно прикрепить {{file name}}, так как размер файла превышает {{file size}} ГБ. Используйте FTP для передачи больших файлов на dropbox.redhat.com."
+msgid "{{fileName}} cannot be attached because it is larger than {{fileSize}} GB. Please FTP large files to dropbox.redhat.com."
+msgstr "Невозможно прикрепить {{fileName}}, так как размер файла превышает {{fileSize}} ГБ. Используйте FTP для передачи больших файлов на dropbox.redhat.com."
 
-msgid "{{file name}} cannot be attached because it is larger than 1 TB."
-msgstr "Невозможно прикрепить {{file name}}, так как размер файла превышает 1 ТБ."
+msgid "{{fileName}} cannot be attached because it is larger than 1 TB."
+msgstr "Невозможно прикрепить {{fileName}}, так как размер файла превышает 1 ТБ."
 
-msgid "{{file name}} cannot be read by the browser. Check your privileges and make sure you are allowed to read the file."
-msgstr "Браузеру не удается прочитать {{file name}}. Проверьте свои права и убедитесь, что у вас есть разрешение на чтение файла."
+msgid "{{fileName}} cannot be read by the browser. Check your privileges and make sure you are allowed to read the file."
+msgstr "Браузеру не удается прочитать {{fileName}}. Проверьте свои права и убедитесь, что у вас есть разрешение на чтение файла."
 
 msgid "Could not fetch custom notification emails"
 msgstr "Не удалось получить пользовательскую электронную почту с уведомлениями"
@@ -2620,3 +2620,6 @@ msgstr "Не удалось опубликовать пользовательс�
 
 msgid "Could not delete custom email"
 msgstr "Не удалось удалить пользовательскую электронную почту"
+
+msgid "Successfully uploaded attachment"
+msgstr "Вложение успешно передано"

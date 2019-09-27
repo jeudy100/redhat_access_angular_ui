@@ -2544,17 +2544,17 @@ msgstr "添付ファイルが正常にアップロードされました"
 msgid "Could not upload"
 msgstr "アップロードできませんでした"
 
-msgid "{{file name}} cannot be attached because it is a 0 byte file."
-msgstr "{{file name}} のファイルは 0 バイトのため、添付できません。"
+msgid "{{fileName}} cannot be attached because it is a 0 byte file."
+msgstr "{{fileName}} のファイルは 0 バイトのため、添付できません。"
 
-msgid "{{file name}} cannot be attached because it is larger than {{file size}} GB. Please FTP large files to dropbox.redhat.com."
-msgstr "{{file name}} は {{file size}} GB を超えるため、添付できません。大容量のファイルは、FTP で dropbox.redhat.com に転送してください。"
+msgid "{{fileName}} cannot be attached because it is larger than {{fileSize}} GB. Please FTP large files to dropbox.redhat.com."
+msgstr "{{fileName}} は {{fileSize}} GB を超えるため、添付できません。大容量のファイルは、FTP で dropbox.redhat.com に転送してください。"
 
-msgid "{{file name}} cannot be attached because it is larger than 1 TB."
-msgstr "{{file name}} は 1 TB を超えるため、添付できません。"
+msgid "{{fileName}} cannot be attached because it is larger than 1 TB."
+msgstr "{{fileName}} は 1 TB を超えるため、添付できません。"
 
-msgid "{{file name}} cannot be read by the browser. Check your privileges and make sure you are allowed to read the file."
-msgstr "{{file name}} は、ブラウザーで読み込むことができません。権限をチェックし、ファイルの読み込みができるか確認してください。"
+msgid "{{fileName}} cannot be read by the browser. Check your privileges and make sure you are allowed to read the file."
+msgstr "{{fileName}} は、ブラウザーで読み込むことができません。権限をチェックし、ファイルの読み込みができるか確認してください。"
 
 msgid "Could not fetch custom notification emails"
 msgstr "カスタム通知メールを取得できませんでした"
@@ -2564,3 +2564,6 @@ msgstr "カスタムメールを送信できませんでした"
 
 msgid "Could not delete custom email"
 msgstr "カスタムメールを削除できませんでした"
+
+msgid "Successfully uploaded attachment"
+msgstr "添付ファイルが正常にアップロードされました"

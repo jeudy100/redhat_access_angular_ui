@@ -66,7 +66,7 @@ export default class AttachLocalFile {
                         $scope.addFile(file);
                     };
                     reader.onerror = () => {
-                        const message = gettextCatalog.getString('{{errorFileName}} cannot be read by the browser. Check your privileges and make sure you are allowed to read the file.', {
+                        const message = gettextCatalog.getString('{{fileName}} cannot be read by the browser. Check your privileges and make sure you are allowed to read the file.', {
                             errorFileName: file.name
                         });
                         AlertService.addDangerMessage(message);
@@ -76,16 +76,16 @@ export default class AttachLocalFile {
                     };
                     reader.readAsArrayBuffer(file.slice(0, 10)); // try reading first 10 bytes
                 } else if (file && file.size === minSize) {
-                    var message = gettextCatalog.getString("{{errorFileName}} cannot be attached because it is a 0 byte file.", { errorFileName: file.name });
+                    var message = gettextCatalog.getString("{{fileName}} cannot be attached because it is a 0 byte file.", { fileName: file.name });
                     AlertService.addDangerMessage(message);
                 } else if (file && !AttachmentsService.s3EnabledForAccount) {
-                    var message = gettextCatalog.getString("{{errorFileName}} cannot be attached because it is larger than {{errorFileSize}} GB. Please FTP large files to dropbox.redhat.com.", {
+                    var message = gettextCatalog.getString("{{fileName}} cannot be attached because it is larger than {{fileSize}} GB. Please FTP large files to dropbox.redhat.com.", {
                         errorFileName: file.name,
                         errorFileSize: (AttachmentsService.maxAttachmentSize / 1024)
                     });
                     AlertService.addDangerMessage(message);
                 } else if (file && AttachmentsService.s3EnabledForAccount) {
-                    var message = gettextCatalog.getString("{{errorFileName}} cannot be attached because it is larger than 1 TB.", {
+                    var message = gettextCatalog.getString("{{fileName}} cannot be attached because it is larger than 1 TB.", {
                         errorFileName: file.name
                     });
                     AlertService.addDangerMessage(message);
