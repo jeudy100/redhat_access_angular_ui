@@ -20,6 +20,7 @@ ul#tab_list.nav.nav-tabs(role="tablist")
                 width='"auto"',
                 ng-init="DiscussionService.commentSortOrder = commentSortOrderList[0]"
                 ng-model='DiscussionService.commentSortOrder',
+                no_results_text="'No match found'|translate",
                 ng-change='onSortOrderChange()',
                 ng-options='commentOrder as commentOrder.name | translate for commentOrder in commentSortOrderList')
         .row.row-very-short.case-discussion

@@ -31,6 +31,7 @@ span(ng-show='ManageGroupsService.usersLoading') {{'Users Loading...'|translate}
                 width='"100%"',
                 ng-if='!user.org_admin',
                 ng-model='user.permission',
+                no_results_text="'No match found'|translate",
                 ng-change='setUserPermission(user)',
                 ng-options='option.value as option.label for option in accessOptions')
             td

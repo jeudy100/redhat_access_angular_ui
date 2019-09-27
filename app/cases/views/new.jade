@@ -119,7 +119,7 @@ div(rha-header='', page='newCase')
                                 b {{'Get faster results.'|translate}}
                                 | &nbsp; {{'Attaching logs or other diagnostics files typically results in faster resolution.'|translate}}
                                 div(ng-if='CaseService.kase.product === "Red Hat Virtualization"')
-                                    span {{'Please attach a ' | translate}}
+                                    span {{'Please attach an ' | translate}}
                                     a(href="/solutions/61546", target='_blank') RHV log collector
                                     span {{' archive (optional)' | translate}}
                                 div(ng-bind-html='$parent.AttachmentsService.parseArtifactHtml()')
@@ -171,6 +171,7 @@ div(rha-header='', page='newCase')
                                 chosen,
                                 multiple,
                                 data-placeholder="{{'Select a User'|translate}}",
+                                no_results_text="'No match found'|translate",
                                 ng-model='$parent.kase.notifiedUsers',
                                 id='rha-email-notify-select',
                                 width='"100%"',
@@ -196,7 +197,7 @@ div(rha-header='', page='newCase')
                                         i.fa.fa-close
                                 input.form-control(type="text", ng-model="$parent.userToAdd", placeholder="{{'Search here to add watchers' | translate}}", ng-model-options="{'debounce': 600}" typeahead-focus-on-select="false"
                                 typeahead-loading="CaseService.isLoadingRHUsers" typeahead-no-results="CaseService.noResultsForRHUsersSearch" typeahead-min-length="0" uib-typeahead="user as (user.name + ' ('+user.ssoUsername+')') for user in CaseService.searchRHUsers($viewValue)")
-                                div(ng-show="CaseService.noResultsForRHUsersSearch && !CaseService.isLoadingRHUsers" translate) No new contacts found.
+                                div(ng-show="CaseService.noResultsForRHUsersSearch && !CaseService.isLoadingRHUsers" translate) {{:: 'No new contacts found.'| translate}}
 
                             div(ng-show='$parent.securityService.loginStatus.authedUser.is_internal && $parent.securityService.isCep')
                                 label#rha-cep-flag(for='email-notifications', translate,translate-comment="Noun"){{::'Consultant Engaged'| translate}}

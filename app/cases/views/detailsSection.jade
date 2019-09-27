@@ -69,6 +69,7 @@ section.case-description
                         chosen,
                         width="'100%'",
                         name='internalStatus',
+                        no_results_text="'No match found'|translate",
                         ng-options='internalStatus | translate for internalStatus in CaseService.internalStatuses',
                         ng-model='CaseService.kase.internal_status')
                 .row.row-short(ng-if='securityService.loginStatus.authedUser.is_internal && COMMON_CONFIG.isGS4')
@@ -81,6 +82,7 @@ section.case-description
                         chosen,
                         multiple,
                         width="'100%'",
+                        no_results_text="'No match found'|translate",
                         data-placeholder="{{'Select SBRs'|translate}}",
                         name='sbrGroups',
                         ng-options='sbrGroup for sbrGroup in CaseService.sbrList',
@@ -93,6 +95,7 @@ section.case-description
                         chosen,
                         width="'100%'",
                         name='group',
+                        no_results_text="'No match found'|translate",
                         ng-options='g.name | translate for g in groups track by g.number',
                         ng-model='CaseService.kase.group',
                         ng-change='fetchPossibleContacts()')

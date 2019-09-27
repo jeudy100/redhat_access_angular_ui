@@ -2,6 +2,7 @@ div
     select#rha-group-select(
         chosen,
         width='"100%"',
+        no_results_text="'No match found'|translate",
         ng-disabled='!securityService.loginStatus.isLoggedIn || CaseService.submittingCase',
         ng-model='CaseService.group',
         ng-change='CaseService.onGroupSelectChanged()',

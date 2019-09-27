@@ -3,6 +3,7 @@ select#rha-filter-select(
     chosen,
     width='"auto"',
     ng-init="init()"
+    no_results_text="'No match found'|translate",
     ng-disabled='!securityService.loginStatus.isLoggedIn',
     ng-model='CaseService.filterSelect',
     ng-change='CaseService.onFilterSelectChanged()',

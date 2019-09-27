@@ -20,6 +20,7 @@
             select#rha-group-select(
                 chosen,
                 width='"100%"',
+                no_results_text="'No match found'|translate",
                 ng-disabled='!securityService.loginStatus.isLoggedIn || CaseService.submittingCase',
                 ng-model='SearchCaseService.searchParameters.caseGroup',
                 ng-change='CaseService.onGroupSelectChanged()',
@@ -29,6 +30,7 @@
         div.col-sm-12.col-md-3()
             select#rha-status-select(chosen,
                 width='"100%"',
+                no_results_text="'No match found'|translate",
                 ng-disabled='!securityService.loginStatus.isLoggedIn',
                 ng-model='SearchCaseService.searchParameters.caseStatus',
                 ng-change='CaseService.onSelectChanged()',

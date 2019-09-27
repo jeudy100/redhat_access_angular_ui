@@ -1,6 +1,7 @@
 select(chosen,
     width='"100%"',
     ng-model='filterByMeAsCreator',
+    no_results_text="'No match found'|translate",
     data-placeholder="{{'Loading Users...' | translate}}",
     ng-options='k as v | translate for (k, v) in filterByMeAsCreatorOptions',
     ng-disabled='!securityService.loginStatus.isLoggedIn || CaseService.usersLoading || CaseService.submittingCase',
