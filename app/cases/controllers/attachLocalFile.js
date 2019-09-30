@@ -67,7 +67,7 @@ export default class AttachLocalFile {
                     };
                     reader.onerror = () => {
                         const message = gettextCatalog.getString('{{fileName}} cannot be read by the browser. Check your privileges and make sure you are allowed to read the file.', {
-                            errorFileName: file.name
+                            fileName: file.name
                         });
                         AlertService.addDangerMessage(message);
                         if ($scope.$root.$$phase !== '$apply' && $scope.$root.$$phase !== '$digest') {
@@ -80,13 +80,13 @@ export default class AttachLocalFile {
                     AlertService.addDangerMessage(message);
                 } else if (file && !AttachmentsService.s3EnabledForAccount) {
                     var message = gettextCatalog.getString("{{fileName}} cannot be attached because it is larger than {{fileSize}} GB. Please FTP large files to dropbox.redhat.com.", {
-                        errorFileName: file.name,
+                        fileName: file.name,
                         errorFileSize: (AttachmentsService.maxAttachmentSize / 1024)
                     });
                     AlertService.addDangerMessage(message);
                 } else if (file && AttachmentsService.s3EnabledForAccount) {
                     var message = gettextCatalog.getString("{{fileName}} cannot be attached because it is larger than 1 TB.", {
-                        errorFileName: file.name
+                        fileName: file.name
                     });
                     AlertService.addDangerMessage(message);
                 }
