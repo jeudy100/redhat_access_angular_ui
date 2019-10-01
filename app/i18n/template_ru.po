@@ -2462,8 +2462,8 @@ msgstr "Предоставьте всю необходимую информац�
 msgid "Used by consultants to indicate that a consulting engagement is in progress and the issue requires an increased attention from support resources"
 msgstr "Используется консультантами для указания на то, что в настоящее время проводятся консультации и этот вопрос требует повышенного внимания со стороны службы поддержки."
 
-msgid "If we have not recorded your business hours correctly, please update your timezone in Your preferences"
-msgstr "Если мы неправильно записали ваш график работы, измените свой часовой пояс в настройках."
+msgid "If we have not recorded your business hours correctly, please update your timezone in <a href=\'{{link}}\' target=\'_blank\'>Your preferences</a>"
+msgstr "Если мы неправильно записали ваш график работы, измените свой часовой пояс в <a href=\'{{link}}\' target=\'_blank\'>Ваших предпочтениях</a>"
 
 msgid "Account number"
 msgstr "Номер клиента"

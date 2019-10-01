@@ -92,7 +92,9 @@ export default class Edit {
                             "<br/>" +
                             availability +
                             "<br/>" +
-                            gettextCatalog.getString(`If we have not recorded your business hours correctly, please update your timezone in  <a href=\'${getRedhatDotComHost()}/wapps/ugc/protected/locale.html\' target=\'_blank\'>Your preferences</a>`);
+                            gettextCatalog.getString(`If we have not recorded your business hours correctly, please update your timezone in <a href=\'{{link}}\' target=\'_blank\'>Your preferences</a>`, {
+                                link: `${getRedhatDotComHost()}/wapps/ugc/protected/locale.html`
+                            });
                         var parsedHtml = $sce.trustAsHtml(message);
                         AlertService.addInfoMessage(parsedHtml);
 

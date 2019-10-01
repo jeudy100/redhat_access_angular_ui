@@ -2407,8 +2407,8 @@ msgstr "지원 팀의 문제 해결에 도움이 될 수 있는 케이스 요약
 msgid "Used by consultants to indicate that a consulting engagement is in progress and the issue requires an increased attention from support resources"
 msgstr "컨설턴트가 컨설팅 업무를 진행하고 있으며 지원 팀에서 이 문제에 대해 더 많은 주의가 필요함을 나타내기 위해 사용합니다."
 
-msgid "If we have not recorded your business hours correctly, please update your timezone in Your preferences"
-msgstr "정상 업무 시간이 정확하게 표시되지 않은 경우 환경 설정에서 시간대를 업데이트하십시오."
+msgid "If we have not recorded your business hours correctly, please update your timezone in <a href=\'{{link}}\' target=\'_blank\'>Your preferences</a>"
+msgstr "정상 업무 시간이 정확하게 표시되지 않은 경우 <a href=\'{{link}}\' target=\'_blank\'>환경 설정</a>에서 시간대를 업데이트하십시오."
 
 msgid "Account number"
 msgstr "계정 번호"

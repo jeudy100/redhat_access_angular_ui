@@ -2373,8 +2373,8 @@ msgstr "请提供其他没有包括在问题单概述或内容中的、可能会
 msgid "Used by consultants to indicate that a consulting engagement is in progress and the issue requires an increased attention from support resources"
 msgstr "咨询顾问用来指示，咨询顾问已参与到这个问题，解决问题可能需要支持团队更多的关注。"
 
-msgid "If we have not recorded your business hours correctly, please update your timezone in Your preferences"
-msgstr "如果您的正常工作时间在我们的记录中不正确，请在您的账户设置中更新您的时区。"
+msgid "If we have not recorded your business hours correctly, please update your timezone in <a href=\'{{link}}\' target=\'_blank\'>Your preferences</a>"
+msgstr "如果您的正常工作时间在我们的记录中不正确，请在您的<a href=\'{{link}}\' target=\'_blank\'>账户设置</a>中更新您的时区"
 
 msgid "Account number"
 msgstr "账户号"

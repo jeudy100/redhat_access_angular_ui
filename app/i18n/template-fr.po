@@ -2535,8 +2535,8 @@ msgstr "Fournissez toute information pertinente utile au service d'assistance qu
 msgid "Used by consultants to indicate that a consulting engagement is in progress and the issue requires an increased attention from support resources"
 msgstr "Utilisé par les consultants pour indiquer qu'un service de consulting est en cours et que le problème nécessite une attention particulière supplémentaire de la part des ressources de support."
 
-msgid "If we have not recorded your business hours correctly, please update your timezone in Your preferences"
-msgstr "Si nous n’avons pas enregistré correctement vos heures d’ouverture, veuillez mettre à jour votre fuseau horaire dans Vos préférences."
+msgid "If we have not recorded your business hours correctly, please update your timezone in <a href=\'{{link}}\' target=\'_blank\'>Your preferences</a>"
+msgstr "Si nous n’avons pas enregistré correctement vos heures d’ouverture, veuillez mettre à jour votre fuseau horaire dans <a href=\'{{link}}\' target=\'_blank\'>Vos préférences</a>"
 
 msgid "Account number"
 msgstr "Numéro de compte"

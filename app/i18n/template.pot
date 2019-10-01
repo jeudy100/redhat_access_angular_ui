@@ -334,8 +334,7 @@ msgstr ""
 #: dist/pcm.js:3917
 msgid ""
 "If we have not recorded your business hours correctly, please update your "
-"timezone in  <a href='/wapps/ugc/protected/locale.html' target='_blank'>Your "
-"preferences</a>"
+"timezone in <a href='{{link}}' target='_blank'>Your preferences</a>"
 msgstr ""
 
 #: dist/pcm.js:3930
@@ -1383,6 +1382,10 @@ msgstr ""
 msgid "Environment"
 msgstr ""
 
+#: app/cases/views/list.html:47
+msgid "Escalated"
+msgstr ""
+
 #: app/cases/views/showRMEEscalation.html:4
 msgid "Escalation ID"
 msgstr ""
@@ -1696,10 +1699,18 @@ msgstr ""
 #: app/cases/views/bookmarkedAccountSelect.html:3
 #: app/cases/views/descriptionSection.html:5
 #: app/cases/views/descriptionSection.html:8
+#: app/cases/views/detailsSection.html:65
+#: app/cases/views/detailsSection.html:75
+#: app/cases/views/detailsSection.html:83
 #: app/cases/views/detailsSection.html:91
+#: app/cases/views/discussionSection.html:15
+#: app/cases/views/filterByCreatorSelect.html:2
 #: app/cases/views/filterByOwnerSelect.html:2
+#: app/cases/views/filterSelect.html:3 app/cases/views/groupSelect.html:3
+#: app/cases/views/listFilter.html:11 app/cases/views/listFilter.html:14
+#: app/cases/views/manageGroupUsers.html:29
 #: app/cases/views/managedAccountSelect.html:3 app/cases/views/new.html:100
-#: app/cases/views/ownerSelect.html:3
+#: app/cases/views/new.html:120 app/cases/views/ownerSelect.html:3
 #: app/cases/views/productFilterSelect.html:2
 #: app/cases/views/productSelect.html:2 app/cases/views/statusSelect.html:2
 #: app/cases/views/typeSelect.html:2 app/cases/views/versionFilterSelect.html:2
@@ -1794,7 +1805,7 @@ msgid "Please Add File Description (max 255 characters)"
 msgstr ""
 
 #: app/cases/views/new.html:92
-msgid "Please attach a"
+msgid "Please attach an"
 msgstr ""
 
 #: app/cases/views/discussionSection.html:155
@@ -2474,6 +2485,14 @@ msgid ""
 "opening this case you will automatically receive notifications&quot; |"
 "translate }}&lt;/span&gt;&lt;/div&gt;&quot;\" tabindex=\"0\" tooltip-trigger="
 "\"focus\" class=\"glyphicon glyphicon-info-sign link\"></span>"
+msgstr ""
+
+#: app/cases/views/emailNotifySelectInternal.html:13
+msgid "{{:: 'No new contacts found.' | translate}}"
+msgstr ""
+
+#: app/cases/views/new.html:136
+msgid "{{:: 'No new contacts found.'| translate}}"
 msgstr ""
 
 #. Noun

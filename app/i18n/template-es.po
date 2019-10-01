@@ -2494,8 +2494,8 @@ msgstr "Incluya cualquier información pertinente que el servicio de Soporte deb
 msgid "Used by consultants to indicate that a consulting engagement is in progress and the issue requires an increased attention from support resources"
 msgstr "Sección exclusiva de los consultores para indicar que se está realizando una contratación de consultoría y que el problema requiere una mayor atención por parte de los recursos de soporte."
 
-msgid "If we have not recorded your business hours correctly, please update your timezone in Your preferences"
-msgstr "Si no hemos registrado correctamente su horario de trabajo, actualice su zona horaria en Your preferences (Sus preferencias)."
+msgid "If we have not recorded your business hours correctly, please update your timezone in <a href=\'{{link}}\' target=\'_blank\'>Your preferences</a>"
+msgstr "Si no hemos registrado correctamente su horario de trabajo, actualice su zona horaria en <a href=\'{{link}}\' target=\'_blank\'>Sus preferencias</a>"
 
 msgid "Account number"
 msgstr "Número de cuenta"

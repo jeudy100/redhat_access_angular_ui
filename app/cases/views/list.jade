@@ -47,8 +47,8 @@ div(ng-hide='showCaseList() || securityService.loginFailure || !securityService.
                             .case-id
                                 .subheading {{case.case_number}}
                                 .description
-                                    span {{case.status}}
-                                    .escalated(ng-if="case.case_customer_escalation || case.escalated") Escalated
+                                    span {{case.status | translate}}
+                                    .escalated(ng-if="case.case_customer_escalation || case.escalated") {{'Escalated' | translate}}
 
                     .col-sm-8.col-md-3.item-group
                         .subheading

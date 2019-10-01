@@ -2406,8 +2406,8 @@ msgstr "ケースサマリーまたはコメント欄に記載されていない
 msgid "Used by consultants to indicate that a consulting engagement is in progress and the issue requires an increased attention from support resources"
 msgstr "コンサルティング業務が行われており、サポートリソースがこの問題に対してさらなる注意は払う必要があることを示す場合に、コンサルタントが使用します"
 
-msgid "If we have not recorded your business hours correctly, please update your timezone in Your preferences"
-msgstr "営業時間が正しく表示されていない場合は、環境設定でタイムゾーンを更新してください"
+msgid "If we have not recorded your business hours correctly, please update your timezone in <a href=\'{{link}}\' target=\'_blank\'>Your preferences</a>"
+msgstr "営業時間が正しく表示されていない場合は、<a href=\'{{link}}\' target=\'_blank\'>環境設定</a> でタイムゾーンを更新してください"
 
 msgid "Account number"
 msgstr "アカウント番号"
